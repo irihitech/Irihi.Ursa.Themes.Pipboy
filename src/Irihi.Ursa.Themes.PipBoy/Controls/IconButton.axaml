@@ -5,7 +5,7 @@
     xmlns:converters="using:Irihi.Ursa.Themes.PipBoy.Converters">
     <Design.PreviewWith>
         <ThemeVariantScope RequestedThemeVariant="Dark">
-            <StackPanel Spacing="16" Background="{DynamicResource SemiColorBackground0}">
+            <StackPanel Spacing="16" Background="{DynamicResource PipboyBackgroundBrush}">
                 <Control.Styles>
                     <Style Selector="Label">
                         <Setter Property="Classes.Tertiary" Value="True" />
