@@ -1,5 +1,10 @@
 <Solution>
   <Folder Name="/benchmark/" />
-  <Folder Name="/demo/" />
+  <Folder Name="/demo/">
+    <Project Path="demo/Irihi.Ursa.Themes.PipBoy.Demo/Irihi.Ursa.Themes.PipBoy.Demo.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Irihi.Ursa.Themes.PipBoy/Irihi.Ursa.Themes.PipBoy.csproj" />
+  </Folder>
   <Folder Name="/test/" />
 </Solution>
