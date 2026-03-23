@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:PipBoyTheme.Demo.ViewModels"
+    xmlns:pages="clr-namespace:PipBoyTheme.Demo.Pages"
     Title="PipBoyTheme.Demo"
     d:DesignHeight="450"
     d:DesignWidth="800"
@@ -21,9 +22,149 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <TextBlock
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Text="{Binding Greeting}" />
+    <Window.Resources>
+
+        <!--  Non-interactive section header in sidebar  -->
+        <ControlTheme x:Key="NavCategory" TargetType="TabItem">
+            <Setter Property="IsEnabled" Value="False" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Template">
+                <ControlTemplate TargetType="TabItem">
+                    <TextBlock
+                        Margin="20,14,0,4"
+                        FontSize="10"
+                        FontWeight="Bold"
+                        Foreground="{DynamicResource PipboyPrimaryDarkBrush}"
+                        LetterSpacing="2"
+                        Text="{TemplateBinding Header}" />
+                </ControlTemplate>
+            </Setter>
+        </ControlTheme>
+
+        <!--  Sidebar nav item with left selection indicator  -->
+        <ControlTheme x:Key="NavTabItem" TargetType="TabItem">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
+            <Setter Property="Padding" Value="20,9" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="Template">
+                <ControlTemplate TargetType="TabItem">
+                    <Border
+                        Name="PART_LayoutRoot"
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="Transparent"
+                        BorderThickness="3,0,0,0">
+                        <ContentPresenter
+                            Name="PART_ContentPresenter"
+                            Content="{TemplateBinding Header}"
+                            FontSize="12"
+                            Foreground="{TemplateBinding Foreground}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+            <Style Selector="^:selected /template/ Border#PART_LayoutRoot">
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryBrush}" />
+            </Style>
+            <Style Selector="^:selected /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+            </Style>
+            <Style Selector="^:pointerover:not(:selected) /template/ Border#PART_LayoutRoot">
+                <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
+            </Style>
+            <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+            </Style>
+        </ControlTheme>
+
+        <!--  Main navigation TabControl: 200 px sidebar + content  -->
+        <ControlTheme x:Key="NavTabControl" TargetType="TabControl">
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
+            <Setter Property="Template">
+                <ControlTemplate TargetType="TabControl">
+                    <Grid ColumnDefinitions="200,*">
+
+                        <!--  ── Left sidebar ──  -->
+                        <DockPanel Grid.Column="0" Background="{DynamicResource PipboySurfaceBrush}">
+                            <!--  Brand  -->
+                            <Border
+                                Padding="20,16"
+                                BorderBrush="{DynamicResource PipboyBorderBrush}"
+                                BorderThickness="0,0,0,1"
+                                DockPanel.Dock="Top">
+                                <TextBlock Classes="h2" Text="PIPBOY OS" />
+                            </Border>
+                            <!--  Nav items  -->
+                            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                                <ItemsPresenter Name="PART_ItemsPresenter" ItemsPanel="{TemplateBinding ItemsPanel}" />
+                            </ScrollViewer>
+                        </DockPanel>
+
+                        <!--  Sidebar right border  -->
+                        <Rectangle
+                            Grid.Column="0"
+                            Width="1"
+                            HorizontalAlignment="Right"
+                            Fill="{DynamicResource PipboyBorderBrush}" />
+
+                        <!--  ── Right: breadcrumb + page content ──  -->
+                        <Grid Grid.Column="1" RowDefinitions="Auto,*">
+                            <Border
+                                Grid.Row="0"
+                                Padding="20,10"
+                                BorderBrush="{DynamicResource PipboyBorderBrush}"
+                                BorderThickness="0,0,0,1">
+                                <StackPanel Orientation="Horizontal" Spacing="6">
+                                    <TextBlock
+                                        VerticalAlignment="Center"
+                                        Classes="dim"
+                                        Text="PIPBOY OS" />
+                                    <TextBlock
+                                        VerticalAlignment="Center"
+                                        Classes="dim"
+                                        Text="›" />
+                                    <TextBlock
+                                        Name="BreadcrumbTitle"
+                                        VerticalAlignment="Center"
+                                        Classes="dim"
+                                        Text="OVERVIEW" />
+                                </StackPanel>
+                            </Border>
+                            <Border
+                                Grid.Row="1"
+                                Background="{TemplateBinding Background}"
+                                ClipToBounds="True">
+                                <ContentPresenter
+                                    Name="PART_SelectedContentHost"
+                                    HorizontalContentAlignment="Stretch"
+                                    VerticalContentAlignment="Stretch"
+                                    Content="{TemplateBinding SelectedContent}"
+                                    ContentTemplate="{TemplateBinding SelectedContentTemplate}" />
+                            </Border>
+                        </Grid>
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+        </ControlTheme>
+
+    </Window.Resources>
+
+    <TabControl Name="MainNav" Theme="{StaticResource NavTabControl}">
+        <TabControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel />
+            </ItemsPanelTemplate>
+        </TabControl.ItemsPanel>
+        <TabItem Header="OVERVIEW" Theme="{StaticResource NavTabItem}">
+            <pages:OverviewPage />
+        </TabItem>
+        <TabItem Header="URSA" Theme="{StaticResource NavTabItem}">
+            <pages:UrsaOverviewPage />
+        </TabItem>
+    </TabControl>
 
 </avalonia:PipboyWindow>
