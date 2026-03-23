@@ -20,7 +20,7 @@ public partial class UrsaOverviewPage : UserControl
 
     private void Button_OnClick(object? sender, RoutedEventArgs e)
     {
-        MessageBox.ShowOverlayAsync("Hello World");
+        MessageBox.ShowOverlayAsync("Hello Pipboy or Ursa!", "Hello");
     }
 }
 
