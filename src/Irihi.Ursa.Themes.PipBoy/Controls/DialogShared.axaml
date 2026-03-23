@@ -42,14 +42,14 @@
         BasedOn="{StaticResource OverlayCloseButton}"
         TargetType="Button">
         <Style Selector="^:pointerover /template/ Border">
-            <Setter Property="Background" Value="{DynamicResource CaptionButtonClosePointeroverBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
         <Style Selector="^:pointerover /template/ PathIcon">
             <Setter Property="Foreground" Value="White" />
         </Style>
 
         <Style Selector="^:pressed /template/ Border">
-            <Setter Property="Background" Value="{DynamicResource CaptionButtonClosePressedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
         <Style Selector="^:pressed /template/ PathIcon">
             <Setter Property="Foreground" Value="White" />

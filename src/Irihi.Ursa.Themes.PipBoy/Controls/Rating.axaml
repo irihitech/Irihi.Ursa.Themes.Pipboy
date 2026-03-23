@@ -4,7 +4,7 @@
     xmlns:u="https://irihi.tech/ursa">
     <ControlTheme x:Key="{x:Type u:RatingCharacter}" TargetType="u:RatingCharacter">
         <Setter Property="Character" Value="{DynamicResource RatingStarIconGlyph}" />
-        <Setter Property="Background" Value="{DynamicResource RatingCharacterBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="{DynamicResource RatingCharacterMargin}" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
@@ -40,7 +40,7 @@
     </ControlTheme>
 
     <ControlTheme x:Key="{x:Type u:Rating}" TargetType="u:Rating">
-        <Setter Property="Foreground" Value="{DynamicResource RatingCharacterForeground}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
         <Setter Property="Character" Value="{DynamicResource RatingStarIconGlyph}" />
         <Setter Property="Size" Value="{DynamicResource RatingDefaultSize}" />
         <Setter Property="ItemTemplate">

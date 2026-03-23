@@ -15,14 +15,14 @@
                         <PathIcon
                             Theme="{StaticResource InnerPathIcon}"
                             Data="{DynamicResource PaginationBackwardGlyph}"
-                            Foreground="{DynamicResource PaginationButtonIconForeground}" />
+                            Foreground="{DynamicResource PipboyTextDimBrush}" />
                     </u:PaginationButton>
                     <StackPanel Name="{x:Static u:Pagination.PART_ButtonPanel}" Orientation="Horizontal" />
                     <u:PaginationButton Name="{x:Static u:Pagination.PART_NextButton}" u:DisabledAdorner.IsEnabled="True">
                         <PathIcon
                             Theme="{StaticResource InnerPathIcon}"
                             Data="{DynamicResource PaginationForwardGlyph}"
-                            Foreground="{DynamicResource PaginationButtonIconForeground}" />
+                            Foreground="{DynamicResource PipboyTextDimBrush}" />
                     </u:PaginationButton>
                     <StackPanel IsVisible="{TemplateBinding ShowQuickJump}" Orientation="Horizontal">
                         <TextBlock
@@ -57,7 +57,7 @@
                         <PathIcon
                             Theme="{StaticResource InnerPathIcon}"
                             Data="{DynamicResource PaginationBackwardGlyph}"
-                            Foreground="{DynamicResource PaginationButtonIconForeground}" />
+                            Foreground="{DynamicResource PipboyTextDimBrush}" />
                     </u:PaginationButton>
                     <Grid ColumnDefinitions="*, Auto, *">
                         <u:NumericIntUpDown
@@ -90,7 +90,7 @@
                         <PathIcon
                             Theme="{StaticResource InnerPathIcon}"
                             Data="{DynamicResource PaginationForwardGlyph}"
-                            Foreground="{DynamicResource PaginationButtonIconForeground}" />
+                            Foreground="{DynamicResource PipboyTextDimBrush}" />
                     </u:PaginationButton>
                 </StackPanel>
             </ControlTemplate>
@@ -108,8 +108,8 @@
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="MinWidth" Value="32" />
         <Setter Property="MinHeight" Value="32" />
-        <Setter Property="Background" Value="{DynamicResource PaginationButtonDefaultBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource PaginationButtonDefaultForeground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <ControlTemplate TargetType="u:PaginationButton">
@@ -129,10 +129,10 @@
             </ControlTemplate>
         </Setter>
         <Style Selector="^:pointerover">
-            <Setter Property="Background" Value="{DynamicResource PaginationButtonPointeroverBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
         </Style>
         <Style Selector="^:pressed">
-            <Setter Property="Background" Value="{DynamicResource PaginationButtonPressedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
         </Style>
         <Style Selector="^:left">
             <Setter Property="Content">
@@ -140,7 +140,7 @@
                     <PathIcon
                         Theme="{StaticResource InnerPathIcon}"
                         Data="{DynamicResource PaginationMoreGlyph}"
-                        Foreground="{DynamicResource PaginationButtonIconForeground}" />
+                        Foreground="{DynamicResource PipboyTextDimBrush}" />
                 </Template>
             </Setter>
             <Style Selector="^:pointerover">
@@ -149,7 +149,7 @@
                         <PathIcon
                             Theme="{StaticResource InnerPathIcon}"
                             Data="{DynamicResource PaginationFastBackwardGlyph}"
-                            Foreground="{DynamicResource PaginationButtonIconForeground}" />
+                            Foreground="{DynamicResource PipboyTextDimBrush}" />
                     </Template>
                 </Setter>
             </Style>
@@ -160,7 +160,7 @@
                     <PathIcon
                         Theme="{StaticResource InnerPathIcon}"
                         Data="{DynamicResource PaginationMoreGlyph}"
-                        Foreground="{DynamicResource PaginationButtonIconForeground}" />
+                        Foreground="{DynamicResource PipboyTextDimBrush}" />
                 </Template>
             </Setter>
             <Style Selector="^:pointerover">
@@ -169,14 +169,14 @@
                         <PathIcon
                             Theme="{StaticResource InnerPathIcon}"
                             Data="{DynamicResource PaginationFastForwardGlyph}"
-                            Foreground="{DynamicResource PaginationButtonIconForeground}" />
+                            Foreground="{DynamicResource PipboyTextDimBrush}" />
                     </Template>
                 </Setter>
             </Style>
         </Style>
         <Style Selector="^:selected">
-            <Setter Property="Background" Value="{DynamicResource PaginationButtonSelectedBackground}" />
-            <Setter Property="Foreground" Value="{DynamicResource PaginationButtonSelectedForeground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             <Setter Property="FontWeight" Value="{DynamicResource TextBlockTitleFontWeight}" />
         </Style>
     </ControlTheme>

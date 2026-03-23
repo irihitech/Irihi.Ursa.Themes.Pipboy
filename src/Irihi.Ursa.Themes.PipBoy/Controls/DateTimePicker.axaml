@@ -3,9 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:u="https://irihi.tech/ursa">
     <ControlTheme x:Key="{x:Type u:DateTimePicker}" TargetType="u:DateTimePicker">
-        <Setter Property="Background" Value="{DynamicResource CalendarDatePickerBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource CalendarDatePickerForeground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource CalendarDatePickerBorderBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource CalendarDatePickerBorderThickness}" />
         <Setter Property="CornerRadius" Value="{DynamicResource CalendarDatePickerCornerRadius}" />
         <Setter Property="IsTodayHighlighted" Value="True" />
@@ -75,8 +75,8 @@
                                 <Border
                                     Margin="{DynamicResource ComboBoxPopupBorderMargin}"
                                     Padding="8"
-                                    Background="{DynamicResource ComboBoxPopupBackground}"
-                                    BorderBrush="{DynamicResource ComboBoxPopupBorderBrush}"
+                                    Background="{DynamicResource PipboySurfaceBrush}"
+                                    BorderBrush="{DynamicResource PipboyBorderBrush}"
                                     BorderThickness="{DynamicResource ComboBoxPopupBorderThickness}"
                                     BoxShadow="{DynamicResource ComboBoxPopupBoxShadow}"
                                     CornerRadius="{DynamicResource CalendarCornerRadius}">
@@ -112,18 +112,18 @@
 
         <Style Selector="^:pointerover">
             <Style Selector="^ /template/ Border#Background">
-                <Setter Property="Background" Value="{DynamicResource CalendarDatePickerPointeroverBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
             </Style>
         </Style>
 
         <!--  Disabled State  -->
         <Style Selector="^:disabled">
             <Style Selector="^ /template/ Border#Background">
-                <Setter Property="Background" Value="{DynamicResource CalendarDatePickerDisabledBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
             </Style>
 
             <Style Selector="^ /template/ Button#PART_Button">
-                <Setter Property="Foreground" Value="{DynamicResource CalendarDatePickerDisabledIconForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
             </Style>
             <Style Selector="^ /template/ TextBox#PART_TextBox">
                 <Setter Property="Background" Value="Transparent" />
@@ -133,10 +133,10 @@
 
         <!--  Focused State  -->
         <Style Selector="^:focus /template/ Border#Background">
-            <Setter Property="BorderBrush" Value="{DynamicResource CalendarDatePickerFocusBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderFocusBrush}" />
         </Style>
         <Style Selector="^:focus-within /template/ Border#Background">
-            <Setter Property="BorderBrush" Value="{DynamicResource CalendarDatePickerFocusBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderFocusBrush}" />
         </Style>
 
         <Style Selector="^.Large">

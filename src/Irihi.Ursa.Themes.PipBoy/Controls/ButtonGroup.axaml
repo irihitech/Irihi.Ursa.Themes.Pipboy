@@ -12,7 +12,7 @@
     <ControlTheme x:Key="{x:Type u:ButtonGroup}" TargetType="u:ButtonGroup">
         <Setter Property="VerticalAlignment" Value="Top" />
         <Setter Property="HorizontalAlignment" Value="Left" />
-        <Setter Property="Background" Value="{DynamicResource ButtonGroupDefaultBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         <Setter Property="CornerRadius" Value="{DynamicResource ButtonGroupCornerRadius}" />
         <Setter Property="ClipToBounds" Value="True" />
         <Setter Property="ItemContainerTheme" Value="{DynamicResource ButtonGroupItemTheme}" />
@@ -53,7 +53,7 @@
                         DockPanel.Dock="Right"
                         Width="1"
                         Height="{DynamicResource ButtonGroupSeparatorHeight}"
-                        Fill="{DynamicResource ButtonGroupSeparatorForeground}" />
+                        Fill="{DynamicResource PipboyBorderBrush}" />
                     <Border
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"

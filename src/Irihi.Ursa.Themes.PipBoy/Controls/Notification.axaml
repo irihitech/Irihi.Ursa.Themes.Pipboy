@@ -66,7 +66,7 @@
     <ControlTheme x:Key="{x:Type u:NotificationCard}" TargetType="u:NotificationCard">
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="BorderThickness" Value="{DynamicResource NotificationCardBorderThickness}" />
-        <Setter Property="Background" Value="{DynamicResource NotificationCardBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         <Setter Property="CornerRadius" Value="{DynamicResource NotificationCardCornerRadius}" />
         <Setter Property="Template">
             <ControlTemplate TargetType="u:NotificationCard">
@@ -99,13 +99,13 @@
                                         <DataTemplate DataType="u:INotification">
                                             <StackPanel Spacing="{DynamicResource NotificationCardTitleSpacing}">
                                                 <SelectableTextBlock
-                                                    Foreground="{DynamicResource NotificationCardTitleForeground}"
+                                                    Foreground="{DynamicResource PipboyTextBrush}"
                                                     FontSize="{DynamicResource NotificationCardTitleFontSize}"
                                                     FontWeight="{DynamicResource NotificationCardTitleFontWeight}"
                                                     IsVisible="{Binding Title, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
                                                     Text="{Binding Title}" />
                                                 <SelectableTextBlock
-                                                    Foreground="{DynamicResource NotificationCardMessageForeground}"
+                                                    Foreground="{DynamicResource PipboyTextBrush}"
                                                     FontSize="{DynamicResource NotificationCardMessageFontSize}"
                                                     FontWeight="{DynamicResource NotificationCardMessageFontWeight}"
                                                     IsVisible="{Binding Content, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
@@ -115,7 +115,7 @@
                                         </DataTemplate>
                                         <DataTemplate DataType="x:String">
                                             <SelectableTextBlock
-                                                Foreground="{DynamicResource NotificationCardMessageForeground}"
+                                                Foreground="{DynamicResource PipboyTextBrush}"
                                                 FontSize="{DynamicResource NotificationCardMessageFontSize}"
                                                 FontWeight="{DynamicResource NotificationCardMessageFontWeight}"
                                                 Text="{Binding}"
@@ -397,39 +397,39 @@
         </Style>
 
         <Style Selector="^:information /template/ PathIcon#NotificationIcon">
-            <Setter Property="Foreground" Value="{DynamicResource NotificationCardInformationIconForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             <Setter Property="Data" Value="{DynamicResource NotificationCardInformationIconPathData}" />
         </Style>
         <Style Selector="^:success /template/ PathIcon#NotificationIcon">
-            <Setter Property="Foreground" Value="{DynamicResource NotificationCardSuccessIconForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboySuccessBrush}" />
             <Setter Property="Data" Value="{DynamicResource NotificationCardSuccessIconPathData}" />
         </Style>
         <Style Selector="^:warning /template/ PathIcon#NotificationIcon">
-            <Setter Property="Foreground" Value="{DynamicResource NotificationCardWarningIconForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyWarningBrush}" />
             <Setter Property="Data" Value="{DynamicResource NotificationCardWarningIconPathData}" />
         </Style>
         <Style Selector="^:error /template/ PathIcon#NotificationIcon">
-            <Setter Property="Foreground" Value="{DynamicResource NotificationCardErrorIconForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyErrorBrush}" />
             <Setter Property="Data" Value="{DynamicResource NotificationCardErrorIconPathData}" />
         </Style>
 
         <Style Selector="^.Light">
-            <Setter Property="Background" Value="{DynamicResource NotificationCardLightBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             <Style Selector="^:information /template/ Border#PART_RootBorder">
-                <Setter Property="BorderBrush" Value="{DynamicResource NotificationCardLightInformationBorderBrush}" />
-                <Setter Property="Background" Value="{DynamicResource NotificationCardLightInformationBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^:success /template/ Border#PART_RootBorder">
-                <Setter Property="BorderBrush" Value="{DynamicResource NotificationCardLightSuccessBorderBrush}" />
-                <Setter Property="Background" Value="{DynamicResource NotificationCardLightSuccessBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySuccessBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^:warning /template/ Border#PART_RootBorder">
-                <Setter Property="BorderBrush" Value="{DynamicResource NotificationCardLightWarningBorderBrush}" />
-                <Setter Property="Background" Value="{DynamicResource NotificationCardLightWarningBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyWarningBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^:error /template/ Border#PART_RootBorder">
-                <Setter Property="BorderBrush" Value="{DynamicResource NotificationCardLightErrorBorderBrush}" />
-                <Setter Property="Background" Value="{DynamicResource NotificationCardLightErrorBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyErrorBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
         </Style>
     </ControlTheme>

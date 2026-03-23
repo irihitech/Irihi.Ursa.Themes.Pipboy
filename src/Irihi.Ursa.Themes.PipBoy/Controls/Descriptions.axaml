@@ -45,7 +45,7 @@
                         <Label
                             Name="{x:Static u:LabeledContentControl.PART_Label}"
                             Grid.Column="0"
-                            Foreground="{DynamicResource DescriptionsKeyTextForeground}"
+                            Foreground="{DynamicResource PipboyTextDimBrush}"
                             TextBlock.LineHeight="{DynamicResource DescriptionsLineHeight}"
                             Content="{TemplateBinding Label}"
                             ContentTemplate="{TemplateBinding LabelTemplate}"
@@ -54,13 +54,13 @@
                             Name="PART_Colon"
                             Grid.Column="1"
                             Text=":"
-                            Foreground="{DynamicResource DescriptionsKeyTextForeground}"
+                            Foreground="{DynamicResource PipboyTextDimBrush}"
                             Margin="{DynamicResource DescriptionsKeyPlainMargin}" />
                         <ContentPresenter
                             Name="{x:Static iri:PartNames.PART_ContentPresenter}"
                             Grid.Column="2"
                             TextBlock.LineHeight="{DynamicResource DescriptionsLineHeight}"
-                            Foreground="{DynamicResource DescriptionsValueTextForeground}"
+                            Foreground="{DynamicResource PipboyTextBrush}"
                             Content="{TemplateBinding Content}"
                             ContentTemplate="{TemplateBinding ContentTemplate}" />
                     </Grid>
@@ -117,13 +117,13 @@
                         <Label
                             Name="{x:Static u:LabeledContentControl.PART_Label}"
                             DataContext="{TemplateBinding Label}"
-                            Foreground="{DynamicResource DescriptionsKeyTextForeground}"
+                            Foreground="{DynamicResource PipboyTextDimBrush}"
                             Content="{TemplateBinding Label}"
                             ContentTemplate="{TemplateBinding LabelTemplate}"
                             Width="{TemplateBinding LabelWidth}" />
                         <ContentPresenter
                             Name="{x:Static iri:PartNames.PART_ContentPresenter}"
-                            Foreground="{DynamicResource DescriptionsValueTextForeground}"
+                            Foreground="{DynamicResource PipboyTextBrush}"
                             FontWeight="{DynamicResource DescriptionsValueFontWeight}"
                             Content="{TemplateBinding Content}"
                             ContentTemplate="{TemplateBinding ContentTemplate}" />

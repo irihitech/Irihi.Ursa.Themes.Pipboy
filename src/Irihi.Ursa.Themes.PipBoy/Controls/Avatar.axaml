@@ -10,8 +10,8 @@
         </StackPanel>
     </Design.PreviewWith>
     <ControlTheme x:Key="{x:Type u:Avatar}" TargetType="{x:Type u:Avatar}">
-        <Setter Property="Foreground" Value="{DynamicResource AvatarForeground}" />
-        <Setter Property="Background" Value="{DynamicResource AvatarGreyBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboyTextDimBrush}" />
         <Setter Property="FontSize" Value="{DynamicResource AvatarMediumFontSize}" />
         <Setter Property="FontWeight" Value="{DynamicResource AvatarFontWeight}" />
         <Setter Property="Padding" Value="3" />
@@ -61,52 +61,52 @@
                         Converter={x:Static ObjectConverters.IsNotNull}}" />
         </Style>
         <Style Selector="^.Red">
-            <Setter Property="Background" Value="{DynamicResource AvatarRedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
         <Style Selector="^.Pink">
-            <Setter Property="Background" Value="{DynamicResource AvatarPinkBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Purple">
-            <Setter Property="Background" Value="{DynamicResource AvatarPurpleBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Violet">
-            <Setter Property="Background" Value="{DynamicResource AvatarVioletBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Indigo">
-            <Setter Property="Background" Value="{DynamicResource AvatarIndigoBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Blue">
-            <Setter Property="Background" Value="{DynamicResource AvatarBlueBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.LightBlue">
-            <Setter Property="Background" Value="{DynamicResource AvatarLightBlueBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryLightBrush}" />
         </Style>
         <Style Selector="^.Cyan">
-            <Setter Property="Background" Value="{DynamicResource AvatarCyanBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryLightBrush}" />
         </Style>
         <Style Selector="^.Teal">
-            <Setter Property="Background" Value="{DynamicResource AvatarTealBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryLightBrush}" />
         </Style>
         <Style Selector="^.Green">
-            <Setter Property="Background" Value="{DynamicResource AvatarGreenBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
         </Style>
         <Style Selector="^.LightGreen">
-            <Setter Property="Background" Value="{DynamicResource AvatarLightGreenBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
         </Style>
         <Style Selector="^.Lime">
-            <Setter Property="Background" Value="{DynamicResource AvatarLimeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
         </Style>
         <Style Selector="^.Yellow">
-            <Setter Property="Background" Value="{DynamicResource AvatarYellowBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
         </Style>
         <Style Selector="^.Amber">
-            <Setter Property="Background" Value="{DynamicResource AvatarAmberBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
         </Style>
         <Style Selector="^.Orange">
-            <Setter Property="Background" Value="{DynamicResource AvatarOrangeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
         </Style>
         <Style Selector="^.Grey">
-            <Setter Property="Background" Value="{DynamicResource AvatarGreyBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyTextDimBrush}" />
         </Style>
 
         <Style Selector="^.Square">

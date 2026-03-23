@@ -14,9 +14,9 @@
         <Setter Property="MinWidth" Value="{DynamicResource CalenderDayMinWidth}" />
         <Setter Property="MinHeight" Value="{DynamicResource CalenderDayMinHeight}" />
         <Setter Property="Margin" Value="{DynamicResource CalenderDayMargin}" />
-        <Setter Property="Foreground" Value="{DynamicResource CalendarItemCalendarDayButtonForeground}" />
-        <Setter Property="Background" Value="{DynamicResource CalenderDayBackground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource CalenderDayBorderBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource CalenderDayBorderThickness}" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="CornerRadius" Value="{DynamicResource CalenderDayCornerRadius}" />
@@ -41,104 +41,104 @@
         </Setter>
 
         <Style Selector="^:in-range">
-            <Setter Property="Background" Value="{DynamicResource CalenderDayInRangeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             <Setter Property="CornerRadius" Value="{DynamicResource CalenderDayInRangeCornerRadius}" />
             <Setter Property="BorderThickness" Value="{DynamicResource CalenderDayNoBorderThickness}" />
-            <Setter Property="Foreground" Value="{DynamicResource CalendarDayInRangeForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
         </Style>
 
         <Style Selector="^:today">
-            <Setter Property="Background" Value="{DynamicResource CalenderDayTodayBackground}" />
-            <Setter Property="Foreground" Value="{DynamicResource CalenderDayTodayForeground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             <Setter Property="Cursor" Value="Hand" />
             <Style Selector="^:in-range">
-                <Setter Property="Background" Value="{DynamicResource CalenderDayInRangeBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             </Style>
         </Style>
 
         <Style Selector="^:not-current-month">
-            <Setter Property="Foreground" Value="{DynamicResource CalenderDayNotCurrentMonthForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
         </Style>
 
         <Style Selector="^:pointerover">
-            <Setter Property="Background" Value="{DynamicResource CalenderDayPointeroverBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
             <Setter Property="Cursor" Value="Hand" />
         </Style>
 
         <Style Selector="^:pressed">
-            <Setter Property="Background" Value="{DynamicResource CalenderDayPressedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
         </Style>
 
         <Style Selector="^:selected">
-            <Setter Property="Background" Value="{DynamicResource CalenderDaySelectedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             <Setter Property="CornerRadius" Value="{DynamicResource CalenderDayCornerRadius}" />
             <Setter Property="BorderThickness" Value="{DynamicResource CalenderDayNoBorderThickness}" />
-            <Setter Property="Foreground" Value="{DynamicResource CalenderDaySelectedForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             <Style Selector="^:pointerover">
-                <Setter Property="Background" Value="{DynamicResource CalenderDaySelectedPointeroverBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             </Style>
             <Style Selector="^:pressed">
-                <Setter Property="Background" Value="{DynamicResource CalenderDaySelectedPressedBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             </Style>
         </Style>
 
 
         <Style Selector="^:start-date">
             <Setter Property="CornerRadius" Value="{DynamicResource CalenderDayStartDateCornerRadius}" />
-            <Setter Property="Background" Value="{DynamicResource CalenderDayStartEndDateBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource CalenderDayStartEndDateBorderBrush}" />
-            <Setter Property="Foreground" Value="{DynamicResource CalenderDaySelectedForeground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             <Style Selector="^:pointerover">
-                <Setter Property="Background" Value="{DynamicResource CalenderDayStartEndDatePointeroverBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
             </Style>
             <Style Selector="^:pressed">
-                <Setter Property="Background" Value="{DynamicResource CalenderDayStartEndDatePressedBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
             </Style>
             <Style Selector="^:in-range">
-                <Setter Property="BorderBrush" Value="{DynamicResource CalenderDayStartEndDateInRangeBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySelectionBrush}" />
                 <Setter Property="BorderThickness" Value="{DynamicResource CalenderDayBorderThickness}" />
             </Style>
         </Style>
 
         <Style Selector="^:end-date">
             <Setter Property="CornerRadius" Value="{DynamicResource CalenderDayEndDateCornerRadius}" />
-            <Setter Property="Background" Value="{DynamicResource CalenderDayStartEndDateBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource CalenderDayStartEndDateBorderBrush}" />
-            <Setter Property="Foreground" Value="{DynamicResource CalenderDaySelectedForeground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             <Style Selector="^:pointerover">
-                <Setter Property="Background" Value="{DynamicResource CalenderDayStartEndDatePointeroverBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
             </Style>
             <Style Selector="^:pressed">
-                <Setter Property="Background" Value="{DynamicResource CalenderDayStartEndDatePressedBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
             </Style>
             <Style Selector="^:in-range">
-                <Setter Property="BorderBrush" Value="{DynamicResource CalenderDayStartEndDateInRangeBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySelectionBrush}" />
                 <Setter Property="BorderThickness" Value="{DynamicResource CalenderDayBorderThickness}" />
             </Style>
         </Style>
 
         <Style Selector="^:preview-start-date">
             <Setter Property="CornerRadius" Value="{DynamicResource CalenderDayStartDateCornerRadius}" />
-            <Setter Property="Background" Value="{DynamicResource CalenderDayPreviewStartEndDateBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
             <Style Selector="^:pressed">
-                <Setter Property="Background" Value="{DynamicResource CalenderDayPreviewStartEndDatePressedBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
         </Style>
 
         <Style Selector="^:preview-end-date">
             <Setter Property="CornerRadius" Value="{DynamicResource CalenderDayEndDateCornerRadius}" />
-            <Setter Property="Background" Value="{DynamicResource CalenderDayPreviewStartEndDateBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
             <Style Selector="^:pressed">
-                <Setter Property="Background" Value="{DynamicResource CalenderDayPreviewStartEndDatePressedBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
         </Style>
 
         <Style Selector="^:blackout">
-            <Setter Property="Foreground" Value="{DynamicResource CalenderDayBlackoutForeground}" />
-            <Setter Property="Background" Value="{DynamicResource CalenderDayBlackoutBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
             <Setter Property="Cursor" Value="No" />
             <Style Selector="^:today">
-                <Setter Property="Foreground" Value="{DynamicResource CalenderDayBlackoutTodayBackground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
         </Style>
     </ControlTheme>
@@ -147,8 +147,8 @@
         <Setter Property="MinWidth" Value="{DynamicResource CalenderYearMinWidth}" />
         <Setter Property="MinHeight" Value="{DynamicResource CalenderYearMinHeight}" />
         <Setter Property="Margin" Value="{DynamicResource CalenderYearMargin}" />
-        <Setter Property="Background" Value="{DynamicResource CalenderYearBackground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource CalenderYearBorderBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource CalenderYearBorderThickness}" />
         <Setter Property="CornerRadius" Value="{DynamicResource CalenderYearCornerRadius}" />
         <Setter Property="Template">
@@ -171,19 +171,19 @@
             </ControlTemplate>
         </Setter>
         <Style Selector="^:pointerover">
-            <Setter Property="Background" Value="{DynamicResource CalenderYearPointeroverBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
             <Setter Property="Cursor" Value="Hand" />
         </Style>
         <Style Selector="^:pressed">
-            <Setter Property="Background" Value="{DynamicResource CalenderYearPressedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
         </Style>
         <Style Selector="^:selected">
-            <Setter Property="Background" Value="{DynamicResource CalenderYearSelectedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             <Setter Property="CornerRadius" Value="{DynamicResource CalenderYearCornerRadius}" />
             <Setter Property="BorderThickness" Value="{DynamicResource CalenderYearSelectedBorderThickness}" />
-            <Setter Property="Foreground" Value="{DynamicResource CalenderYearSelectedForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             <Style Selector="^:pointerover">
-                <Setter Property="Background" Value="{DynamicResource CalenderYearSelectedPointeroverBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             </Style>
         </Style>
     </ControlTheme>
@@ -191,7 +191,7 @@
     <ControlTheme x:Key="{x:Type u:CalendarView}" TargetType="u:CalendarView">
         <Setter Property="MinHeight" Value="{DynamicResource CalenderViewMinWidth}" />
         <Setter Property="MinWidth" Value="{DynamicResource CalenderViewMinHeight}" />
-        <Setter Property="Background" Value="{DynamicResource DatePickerViewBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         <Setter Property="Template">
             <ControlTemplate TargetType="u:CalendarView">
                 <Grid Background="{TemplateBinding Background}" RowDefinitions="Auto, *">

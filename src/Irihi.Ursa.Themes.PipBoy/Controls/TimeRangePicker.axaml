@@ -4,9 +4,9 @@
     xmlns:u="https://irihi.tech/ursa"
     xmlns:iri="https://irihi.tech/shared">
     <ControlTheme x:Key="{x:Type u:TimeRangePicker}" TargetType="u:TimeRangePicker">
-        <Setter Property="Background" Value="{DynamicResource TextBoxDefaultBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBoxForeground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource TextBoxDefaultBorderBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource TextBoxBorderThickness}" />
         <Setter Property="CornerRadius" Value="{DynamicResource TextBoxDefaultCornerRadius}" />
         <Setter Property="MinHeight" Value="32" />
@@ -84,8 +84,8 @@
                             <Border
                                 Margin="{DynamicResource ComboBoxPopupBorderMargin}"
                                 HorizontalAlignment="Stretch"
-                                Background="{DynamicResource ComboBoxPopupBackground}"
-                                BorderBrush="{DynamicResource ComboBoxPopupBorderBrush}"
+                                Background="{DynamicResource PipboySurfaceBrush}"
+                                BorderBrush="{DynamicResource PipboyBorderBrush}"
                                 BorderThickness="{DynamicResource ComboBoxPopupBorderThickness}"
                                 BoxShadow="{DynamicResource ComboBoxPopupBoxShadow}"
                                 CornerRadius="6">
@@ -130,7 +130,7 @@
                                             Grid.Row="1"
                                             Grid.Column="0"
                                             Grid.ColumnSpan="3"
-                                            Fill="{DynamicResource DateTimePickerSeparatorBackground}"
+                                            Fill="{DynamicResource PipboyBorderBrush}"
                                             Margin="8 0"
                                             Height="1" />
                                         <u:TimePickerPresenter
@@ -145,7 +145,7 @@
                                             Width="1"
                                             Margin="0,4"
                                             VerticalAlignment="Stretch"
-                                            Fill="{DynamicResource DateTimePickerSeparatorBackground}" />
+                                            Fill="{DynamicResource PipboyBorderBrush}" />
                                         <u:TimePickerPresenter
                                             Name="{x:Static u:TimeRangePicker.PART_EndPresenter}"
                                             Grid.Row="2"
@@ -170,11 +170,11 @@
         <!--  Disabled State  -->
         <Style Selector="^:disabled">
             <Style Selector="^ /template/ Border#Background">
-                <Setter Property="Background" Value="{DynamicResource CalendarDatePickerDisabledBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
             </Style>
 
             <Style Selector="^ /template/ Button#PART_Button">
-                <Setter Property="Foreground" Value="{DynamicResource CalendarDatePickerDisabledIconForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
             </Style>
             <Style Selector="^ /template/ TextBox#PART_TextBox">
                 <Setter Property="Background" Value="Transparent" />
@@ -184,10 +184,10 @@
 
         <!--  Focused State  -->
         <Style Selector="^ /template/ Border#Background:focus">
-            <Setter Property="BorderBrush" Value="{DynamicResource CalendarDatePickerFocusBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderFocusBrush}" />
         </Style>
         <Style Selector="^ /template/ Border#Background:focus-within">
-            <Setter Property="BorderBrush" Value="{DynamicResource CalendarDatePickerFocusBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderFocusBrush}" />
         </Style>
 
         <Style Selector="^.Large">
