@@ -85,7 +85,7 @@
                                         BorderThickness="0"
                                         CornerRadius="{Binding $parent[Border].CornerRadius}"
                                         FirstDayOfWeek="{TemplateBinding FirstDayOfWeek}"
-                                        FontSize="{DynamicResource DefaultFontSize}"
+                                        FontSize="{DynamicResource PipboyFontSize}"
                                         IsTodayHighlighted="{TemplateBinding IsTodayHighlighted}" />
                                 </Border>
                             </Popup>

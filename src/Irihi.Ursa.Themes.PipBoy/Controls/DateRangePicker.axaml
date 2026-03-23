@@ -121,7 +121,7 @@
                                             BorderThickness="0"
                                             CornerRadius="{Binding $parent[Border].CornerRadius}"
                                             FirstDayOfWeek="{TemplateBinding FirstDayOfWeek}"
-                                            FontSize="{DynamicResource DefaultFontSize}"
+                                            FontSize="{DynamicResource PipboyFontSize}"
                                             IsTodayHighlighted="{TemplateBinding IsTodayHighlighted}" />
                                         <u:CalendarView
                                             Name="{x:Static u:DateRangePicker.PART_EndCalendar}"
@@ -130,7 +130,7 @@
                                             BorderThickness="0"
                                             CornerRadius="{Binding $parent[Border].CornerRadius}"
                                             FirstDayOfWeek="{TemplateBinding FirstDayOfWeek}"
-                                            FontSize="{DynamicResource DefaultFontSize}"
+                                            FontSize="{DynamicResource PipboyFontSize}"
                                             IsTodayHighlighted="{TemplateBinding IsTodayHighlighted}" />
                                     </Grid>
                                 </DockPanel>

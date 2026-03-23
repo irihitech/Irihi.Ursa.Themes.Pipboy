@@ -131,7 +131,7 @@
                             Width="12"
                             Height="12"
                             Margin="4,0,0,0"
-                            Foreground="{DynamicResource SemiColorText2}"
+                            Foreground="{DynamicResource PipboyTextDimBrush}"
                             Command="{TemplateBinding Command}"
                             CommandParameter="{TemplateBinding}"
                             Content="{StaticResource ClosableTagCloseIconGlyph}" />
@@ -147,10 +147,10 @@
             </ControlTemplate>
         </Setter>
         <Style Selector="^ /template/ Button#PART_CloseButton:pointerover">
-            <Setter Property="Foreground" Value="{DynamicResource SemiColorText1}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
         </Style>
         <Style Selector="^ /template/ Button#PART_CloseButton:pressed">
-            <Setter Property="Foreground" Value="{DynamicResource SemiColorText0}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
         </Style>
     </ControlTheme>
 </ResourceDictionary>

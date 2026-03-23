@@ -256,7 +256,7 @@
                             HorizontalAlignment="Left"
                             Content="{TemplateBinding Header}"
                             ContentTemplate="{TemplateBinding HeaderTemplate}"
-                            Foreground="{DynamicResource TextBlockQuaternaryForeground}"
+                            Foreground="{DynamicResource PipboyTextDimBrush}"
                             IsVisible="{TemplateBinding Header, Converter={x:Static ObjectConverters.IsNotNull}}">
                             <ContentPresenter.Styles>
                                 <Style Selector="TextBlock">

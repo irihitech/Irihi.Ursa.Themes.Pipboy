@@ -5,7 +5,7 @@
     xmlns:iri="https://irihi.tech/shared">
 
     <ControlTheme x:Key="{x:Type u:OverlayDialogHost}" TargetType="u:OverlayDialogHost">
-        <Setter Property="OverlayMaskBrush" Value="{DynamicResource OverlayDialogMaskBrush}" />
+        <Setter Property="OverlayMaskBrush" Value="{DynamicResource PipboyBackgroundBrush}" />
     </ControlTheme>
 
     <ControlTheme x:Key="{x:Type u:CustomDialogControl}" TargetType="u:CustomDialogControl">
@@ -28,7 +28,7 @@
                         Padding="0"
                         HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                         VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                        Background="{DynamicResource SemiColorBackground2}"
+                        Background="{DynamicResource PipboySurfaceBrush}"
                         Classes="Shadow"
                         ClipToBounds="False"
                         CornerRadius="{TemplateBinding CornerRadius}"
@@ -71,7 +71,7 @@
                 <Setter Property="VerticalAlignment" Value="Stretch" />
                 <Setter Property="Theme" Value="{x:Null}" />
                 <Setter Property="Margin" Value="0" />
-                <Setter Property="Background" Value="{DynamicResource BorderCardBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
         </Style>
         <Style Selector="^ /template/ Panel#PART_TitleArea">
@@ -149,7 +149,7 @@
                         Padding="0"
                         HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                         VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                        Background="{DynamicResource SemiColorBackground2}"
+                        Background="{DynamicResource PipboySurfaceBrush}"
                         BoxShadow="0 0 8 0 #1A000000"
                         Classes="Shadow"
                         ClipToBounds="False"
@@ -226,7 +226,7 @@
             <Setter Property="VerticalAlignment" Value="Stretch" />
             <Setter Property="Theme" Value="{x:Null}" />
             <Setter Property="Margin" Value="0" />
-            <Setter Property="Background" Value="{DynamicResource BorderCardBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         </Style>
         <Style Selector="^ /template/ Button#PART_CancelButton">
             <Setter Property="Grid.Column" Value="0" />
@@ -275,7 +275,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogInformationIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiBlue6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Primary" />
@@ -294,7 +294,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogWarningIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiOrange6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Warning" />
@@ -316,7 +316,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogErrorIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiRed6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Danger" />
@@ -335,7 +335,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogQuestionIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiBlue6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Primary" />
@@ -354,7 +354,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogSuccessIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiGreen6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Success" />
@@ -430,11 +430,11 @@
 
     <ControlTheme x:Key="{x:Type u:DialogWindow}" TargetType="u:DialogWindow">
         <Setter Property="Title" Value="{x:Null}" />
-        <Setter Property="Background" Value="{DynamicResource SemiColorBackground2}" />
-        <Setter Property="TransparencyBackgroundFallback" Value="{DynamicResource WindowDefaultBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource WindowDefaultForeground}" />
-        <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}" />
-        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontFamily}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="TransparencyBackgroundFallback" Value="{DynamicResource PipboyBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="FontSize" Value="{DynamicResource PipboyFontSize}" />
+        <Setter Property="FontFamily" Value="{DynamicResource PipboyFontFamily}" />
         <Setter Property="Padding" Value="48 24" />
         <Setter Property="SizeToContent" Value="WidthAndHeight" />
         <Setter Property="WindowStartupLocation" Value="CenterOwner" />
@@ -502,11 +502,11 @@
 
     <ControlTheme x:Key="{x:Type u:DefaultDialogWindow}" TargetType="u:DefaultDialogWindow">
         <Setter Property="Title" Value="{x:Null}" />
-        <Setter Property="Background" Value="{DynamicResource SemiColorBackground2}" />
-        <Setter Property="TransparencyBackgroundFallback" Value="{DynamicResource WindowDefaultBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource WindowDefaultForeground}" />
-        <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}" />
-        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontFamily}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="TransparencyBackgroundFallback" Value="{DynamicResource PipboyBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="FontSize" Value="{DynamicResource PipboyFontSize}" />
+        <Setter Property="FontFamily" Value="{DynamicResource PipboyFontFamily}" />
         <Setter Property="Padding" Value="48 24" />
         <Setter Property="SizeToContent" Value="WidthAndHeight" />
         <Setter Property="WindowStartupLocation" Value="CenterOwner" />
@@ -640,7 +640,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogInformationIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiBlue6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Primary" />
@@ -659,7 +659,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogWarningIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiOrange6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Warning" />
@@ -681,7 +681,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogErrorIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiRed6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Danger" />
@@ -700,7 +700,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogQuestionIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiBlue6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Primary" />
@@ -719,7 +719,7 @@
             <Style Selector="^ /template/ PathIcon#PART_Icon">
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Data" Value="{DynamicResource DialogSuccessIconGlyph}" />
-                <Setter Property="Foreground" Value="{DynamicResource SemiGreen6}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^ /template/ Button#PART_OKButton">
                 <Setter Property="iri:ClassHelper.Classes" Value="Success" />

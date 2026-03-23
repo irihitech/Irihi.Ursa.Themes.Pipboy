@@ -3,10 +3,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:u="https://irihi.tech/ursa">
     <ControlTheme x:Key="{x:Type u:UrsaView}" TargetType="{x:Type u:UrsaView}">
-        <Setter Property="Background" Value="{DynamicResource WindowDefaultBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource WindowDefaultForeground}" />
-        <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}" />
-        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontFamily}" />
+        <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="FontSize" Value="{DynamicResource PipboyFontSize}" />
+        <Setter Property="FontFamily" Value="{DynamicResource PipboyFontFamily}" />
         <Setter Property="u:OverlayDialogHost.IsModalStatusScope" Value="True" />
         <Setter Property="Template">
             <ControlTemplate TargetType="u:UrsaView">
