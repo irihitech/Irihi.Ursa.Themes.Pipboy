@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace Irihi.Ursa.Themes.PipBoy.Demo;
+namespace Irihi.Ursa.Themes.PipBoy.Demo.Views;
 
 public partial class MainWindow : Window
 {
