@@ -2,7 +2,7 @@ using System.Globalization;
 using Avalonia;
 using Irihi.Avalonia.Shared.Converters;
 
-namespace Irihi.Ursa.Themes.PipBoy.Converters;
+namespace Irihi.Ursa.Themes.Pipboy.Converters;
 
 public class NavMenuMarginConverter : MarkupMultiValueConverter
 {

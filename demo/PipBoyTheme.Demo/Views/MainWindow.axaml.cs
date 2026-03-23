@@ -1,7 +1,7 @@
 using Avalonia.Controls;
 using Pipboy.Avalonia;
 
-namespace PipBoyTheme.Demo.Views;
+namespace PipboyTheme.Demo.Views;
 
 public partial class MainWindow : PipboyWindow
 {

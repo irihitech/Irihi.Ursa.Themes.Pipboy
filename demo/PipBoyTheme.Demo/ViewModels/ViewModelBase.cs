@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace PipBoyTheme.Demo.ViewModels;
+namespace PipboyTheme.Demo.ViewModels;
 
 public abstract class ViewModelBase : ObservableObject
 {

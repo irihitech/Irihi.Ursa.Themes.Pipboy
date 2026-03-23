@@ -4,7 +4,7 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Ursa.Controls;
 
-namespace PipBoyTheme.Demo.Pages;
+namespace PipboyTheme.Demo.Pages;
 
 public partial class UrsaOverviewPage : UserControl
 {

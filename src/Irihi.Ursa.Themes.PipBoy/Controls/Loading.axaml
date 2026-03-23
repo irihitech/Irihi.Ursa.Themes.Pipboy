@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:u="https://irihi.tech/ursa"
     xmlns:iri="https://irihi.tech/shared"
-    xmlns:converters="using:Irihi.Ursa.Themes.PipBoy.Converters">
+    xmlns:converters="using:Irihi.Ursa.Themes.Pipboy.Converters">
     <Design.PreviewWith>
         <StackPanel Margin="20">
             <u:LoadingIcon Classes="Large" />

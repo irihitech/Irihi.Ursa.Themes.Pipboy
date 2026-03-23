@@ -2,12 +2,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:pipboy="clr-namespace:Pipboy.Avalonia;assembly=Pipboy.Avalonia"
+             xmlns:Pipboy="clr-namespace:Pipboy.Avalonia;assembly=Pipboy.Avalonia"
              xmlns:u="https://irihi.tech/ursa"
              mc:Ignorable="d" d:DesignWidth="800"
              d:DesignHeight="450"
-             x:Class="PipBoyTheme.Demo.Pages.UrsaOverviewPage">
-    <pipboy:CrtDisplay
+             x:Class="PipboyTheme.Demo.Pages.UrsaOverviewPage">
+    <Pipboy:CrtDisplay
         x:Name="OverviewCrt"
         HorizontalAlignment="Stretch"
         VerticalAlignment="Stretch"
@@ -35,5 +35,5 @@
             <u:OverlayDialogHost />
         </Panel>
         
-    </pipboy:CrtDisplay>
+    </Pipboy:CrtDisplay>
 </UserControl>

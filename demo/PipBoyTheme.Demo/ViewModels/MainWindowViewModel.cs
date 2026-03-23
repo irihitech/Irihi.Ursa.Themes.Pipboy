@@ -1,4 +1,4 @@
-﻿namespace PipBoyTheme.Demo.ViewModels;
+﻿namespace PipboyTheme.Demo.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
