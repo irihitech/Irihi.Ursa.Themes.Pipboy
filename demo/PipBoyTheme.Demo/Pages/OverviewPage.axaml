@@ -3,10 +3,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800"
-             xmlns:pipboy="clr-namespace:Pipboy.Avalonia;assembly=Pipboy.Avalonia"
+             xmlns:Pipboy="clr-namespace:Pipboy.Avalonia;assembly=Pipboy.Avalonia"
              d:DesignHeight="450"
-             x:Class="PipBoyTheme.Demo.Pages.OverviewPage">
-    <pipboy:CrtDisplay
+             x:Class="PipboyTheme.Demo.Pages.OverviewPage">
+    <Pipboy:CrtDisplay
         x:Name="OverviewCrt"
         HorizontalAlignment="Stretch"
         VerticalAlignment="Stretch"
@@ -36,7 +36,7 @@
                     <Grid ColumnDefinitions="*,Auto">
 
                         <StackPanel Grid.Column="0" Spacing="2">
-                            <TextBlock Classes="h1" Text="PIPBOY OS v4.0" />
+                            <TextBlock Classes="h1" Text="Pipboy OS v4.0" />
                             <TextBlock
                                 Classes="dim"
                                 FontSize="10"
@@ -49,12 +49,12 @@
                             HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Spacing="2">
-                            <pipboy:BlinkText IsBlinking="True">
+                            <Pipboy:BlinkText IsBlinking="True">
                                 <TextBlock
                                     Classes="accent"
                                     FontSize="10"
                                     Text="● SYSTEM ONLINE" />
-                            </pipboy:BlinkText>
+                            </Pipboy:BlinkText>
                             <TextBlock
                                 Classes="dim"
                                 FontSize="10"
@@ -74,13 +74,13 @@
                     BorderBrush="{DynamicResource PipboyBorderBrush}"
                     BorderThickness="0,0,0,1"
                     Padding="16,0">
-                    <pipboy:PipboyTabStrip SelectedIndex="0">
-                        <pipboy:PipboyTabStripItem Content="STAT" />
-                        <pipboy:PipboyTabStripItem Content="INV" />
-                        <pipboy:PipboyTabStripItem Content="DATA" />
-                        <pipboy:PipboyTabStripItem Content="MAP" />
-                        <pipboy:PipboyTabStripItem Content="RADIO" />
-                    </pipboy:PipboyTabStrip>
+                    <Pipboy:PipboyTabStrip SelectedIndex="0">
+                        <Pipboy:PipboyTabStripItem Content="STAT" />
+                        <Pipboy:PipboyTabStripItem Content="INV" />
+                        <Pipboy:PipboyTabStripItem Content="DATA" />
+                        <Pipboy:PipboyTabStripItem Content="MAP" />
+                        <Pipboy:PipboyTabStripItem Content="RADIO" />
+                    </Pipboy:PipboyTabStrip>
                 </Border>
 
                 <!--  ── Row 2: Three-column dashboard  ── -->
@@ -92,31 +92,31 @@
 
                             <HeaderedContentControl Classes="groupbox" Header="S.P.E.C.I.A.L.">
                                 <StackPanel Spacing="3">
-                                    <pipboy:RatedAttribute Label="STRENGTH"     Value="8" />
-                                    <pipboy:RatedAttribute Label="PERCEPTION"   Value="5" />
-                                    <pipboy:RatedAttribute Label="ENDURANCE"    Value="7" />
-                                    <pipboy:RatedAttribute Label="CHARISMA"     Value="4" />
-                                    <pipboy:RatedAttribute Label="INTELLIGENCE" Value="9" />
-                                    <pipboy:RatedAttribute Label="AGILITY"      Value="6" />
-                                    <pipboy:RatedAttribute Label="LUCK"         Value="3" />
+                                    <Pipboy:RatedAttribute Label="STRENGTH"     Value="8" />
+                                    <Pipboy:RatedAttribute Label="PERCEPTION"   Value="5" />
+                                    <Pipboy:RatedAttribute Label="ENDURANCE"    Value="7" />
+                                    <Pipboy:RatedAttribute Label="CHARISMA"     Value="4" />
+                                    <Pipboy:RatedAttribute Label="INTELLIGENCE" Value="9" />
+                                    <Pipboy:RatedAttribute Label="AGILITY"      Value="6" />
+                                    <Pipboy:RatedAttribute Label="LUCK"         Value="3" />
                                 </StackPanel>
                             </HeaderedContentControl>
 
                             <HeaderedContentControl Classes="groupbox" Header="VITAL SIGNS">
                                 <StackPanel Spacing="5">
-                                    <pipboy:SegmentedBar
+                                    <Pipboy:SegmentedBar
                                         Label="HP"
                                         Maximum="100"
                                         SegmentCount="16"
                                         ShowProgressBar="True"
                                         Value="72" />
-                                    <pipboy:SegmentedBar
+                                    <Pipboy:SegmentedBar
                                         Label="AP"
                                         Maximum="100"
                                         SegmentCount="16"
                                         ShowProgressBar="True"
                                         Value="45" />
-                                    <pipboy:SegmentedBar
+                                    <Pipboy:SegmentedBar
                                         Label="RAD"
                                         Maximum="100"
                                         SegmentCount="16"
@@ -126,7 +126,7 @@
                             </HeaderedContentControl>
 
                             <HeaderedContentControl Classes="groupbox accent" Header="CRITICAL TIMER">
-                                <pipboy:PipboyCountdown
+                                <Pipboy:PipboyCountdown
                                     x:Name="OverviewCountdown"
                                     Duration="0:3:00"
                                     Label="SELF DESTRUCT"
@@ -162,7 +162,7 @@
                                             </Style>
                                         </WrapPanel.Styles>
                                         <!--  Classic  -->
-                                        <Border Classes="swatch" Background="#15FF52" Tag="#15FF52" PointerPressed="OnSwatchPointerPressed" ToolTip.Tip="PIPBOY GREEN" />
+                                        <Border Classes="swatch" Background="#15FF52" Tag="#15FF52" PointerPressed="OnSwatchPointerPressed" ToolTip.Tip="Pipboy GREEN" />
                                         <Border Classes="swatch" Background="#FFA500" Tag="#FFA500" PointerPressed="OnSwatchPointerPressed" ToolTip.Tip="AMBER" />
                                         <Border Classes="swatch" Background="#00BFFF" Tag="#00BFFF" PointerPressed="OnSwatchPointerPressed" ToolTip.Tip="BLUE" />
                                         <Border Classes="swatch" Background="#FF3030" Tag="#FF3030" PointerPressed="OnSwatchPointerPressed" ToolTip.Tip="RED" />
@@ -184,7 +184,7 @@
                                         x:Name="SwatchLabel"
                                         Classes="dim"
                                         FontSize="10"
-                                        Text="PIPBOY GREEN  #15FF52" />
+                                        Text="Pipboy GREEN  #15FF52" />
                                 </StackPanel>
                             </HeaderedContentControl>
 
@@ -259,7 +259,7 @@
 
                             <!--  Terminal panel  -->
                             <HeaderedContentControl Classes="groupbox" Header="TERMINAL OUTPUT">
-                                <pipboy:TerminalPanel
+                                <Pipboy:TerminalPanel
                                     x:Name="OverviewTerminal"
                                     Content="ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL&#x0a;ENTER PASSWORD NOW&#x0a;&#x0a;&gt; ACCESSING MAINFRAME...&#x0a;&gt; CONNECTION ESTABLISHED.&#x0a;&gt; WELCOME, OVERSEER."
                                     TypewriterDelayMs="35"
@@ -280,9 +280,9 @@
                                         <ProgressBar Maximum="100" Value="75" />
                                         <ProgressBar Maximum="100" Value="45" />
                                         <ProgressBar IsIndeterminate="True" />
-                                        <pipboy:BlinkText IsBlinking="True">
+                                        <Pipboy:BlinkText IsBlinking="True">
                                             <TextBlock Classes="accent" Text="PRESS ENTER TO CONTINUE" />
-                                        </pipboy:BlinkText>
+                                        </Pipboy:BlinkText>
                                     </StackPanel>
                                 </Grid>
                             </HeaderedContentControl>
@@ -298,24 +298,24 @@
 
                             <HeaderedContentControl Classes="groupbox" Header="MAIN MENU">
                                 <StackPanel Spacing="2">
-                                    <pipboy:BracketHighlight IsSelected="True" SelectionGroup="ovMenu">
+                                    <Pipboy:BracketHighlight IsSelected="True" SelectionGroup="ovMenu">
                                         <TextBlock Text="INVENTORY" />
-                                    </pipboy:BracketHighlight>
-                                    <pipboy:BracketHighlight SelectionGroup="ovMenu">
+                                    </Pipboy:BracketHighlight>
+                                    <Pipboy:BracketHighlight SelectionGroup="ovMenu">
                                         <TextBlock Text="STATUS" />
-                                    </pipboy:BracketHighlight>
-                                    <pipboy:BracketHighlight SelectionGroup="ovMenu">
+                                    </Pipboy:BracketHighlight>
+                                    <Pipboy:BracketHighlight SelectionGroup="ovMenu">
                                         <TextBlock Text="MAP" />
-                                    </pipboy:BracketHighlight>
-                                    <pipboy:BracketHighlight SelectionGroup="ovMenu">
+                                    </Pipboy:BracketHighlight>
+                                    <Pipboy:BracketHighlight SelectionGroup="ovMenu">
                                         <TextBlock Text="RADIO" />
-                                    </pipboy:BracketHighlight>
-                                    <pipboy:BracketHighlight SelectionGroup="ovMenu">
+                                    </Pipboy:BracketHighlight>
+                                    <Pipboy:BracketHighlight SelectionGroup="ovMenu">
                                         <TextBlock Text="DATA" />
-                                    </pipboy:BracketHighlight>
-                                    <pipboy:BracketHighlight SelectionGroup="ovMenu">
+                                    </Pipboy:BracketHighlight>
+                                    <Pipboy:BracketHighlight SelectionGroup="ovMenu">
                                         <TextBlock Text="SETTINGS" />
-                                    </pipboy:BracketHighlight>
+                                    </Pipboy:BracketHighlight>
                                 </StackPanel>
                             </HeaderedContentControl>
 
@@ -373,12 +373,12 @@
                     Padding="20,6">
                     <Grid ColumnDefinitions="*,Auto">
 
-                        <pipboy:BlinkText
+                        <Pipboy:BlinkText
                             Grid.Column="0"
                             VerticalAlignment="Center"
                             IsBlinking="True">
                             <TextBlock Classes="accent" Text="> AWAITING INPUT_" />
-                        </pipboy:BlinkText>
+                        </Pipboy:BlinkText>
 
                         <StackPanel
                             Grid.Column="1"
@@ -409,5 +409,5 @@
             </Grid>
         </Border>
 
-    </pipboy:CrtDisplay>
+    </Pipboy:CrtDisplay>
 </UserControl>

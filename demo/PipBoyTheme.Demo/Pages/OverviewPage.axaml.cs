@@ -6,13 +6,13 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Pipboy.Avalonia;
 
-namespace PipBoyTheme.Demo.Pages;
+namespace PipboyTheme.Demo.Pages;
 
 public partial class OverviewPage : UserControl
 {
     private static readonly (string Hex, string Name)[] Presets =
     [
-        ("#15FF52", "PIPBOY GREEN"), ("#FFA500", "AMBER"),   ("#00BFFF", "BLUE"),   ("#FF3030", "RED"),
+        ("#15FF52", "Pipboy GREEN"), ("#FFA500", "AMBER"),   ("#00BFFF", "BLUE"),   ("#FF3030", "RED"),
         ("#00FFEE", "CYAN"),         ("#BB44FF", "PURPLE"),  ("#FFD700", "GOLD"),   ("#FF8C00", "ORANGE"),
         ("#607D8B", "SLATE"),        ("#9E9E9E", "GRAPHITE"),("#88C0D0", "NORD"),   ("#0F52BA", "COBALT"),
         ("#5C6BC0", "INDIGO"),       ("#FF4080", "ROSE"),    ("#39FF14", "NEON"),   ("#FF8FAB", "SAKURA"),

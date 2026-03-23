@@ -1,9 +1,9 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="PipBoyTheme.Demo.App"
-             xmlns:local="using:PipBoyTheme.Demo"
+             x:Class="PipboyTheme.Demo.App"
+             xmlns:local="using:PipboyTheme.Demo"
              xmlns:pipboy="clr-namespace:Pipboy.Avalonia;assembly=Pipboy.Avalonia"
-             xmlns:pipBoy="clr-namespace:Irihi.Ursa.Themes.PipBoy;assembly=Irihi.Ursa.Themes.PipBoy"
+             xmlns:pipboy1="clr-namespace:Irihi.Ursa.Themes.Pipboy;assembly=Irihi.Ursa.Themes.PipBoy"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
@@ -13,6 +13,6 @@
   
     <Application.Styles>
         <pipboy:PipboyTheme />
-        <pipBoy:UrsaPipboyTheme/>
+        <pipboy1:UrsaPipboyTheme/>
     </Application.Styles>
 </Application>

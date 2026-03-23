@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace PipBoyTheme.Demo;
+namespace PipboyTheme.Demo;
 
 sealed class Program
 {

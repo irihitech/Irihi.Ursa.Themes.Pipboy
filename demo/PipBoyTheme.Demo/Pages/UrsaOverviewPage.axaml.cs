@@ -8,7 +8,7 @@ using Avalonia.Markup.Xaml;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Ursa.Controls;
 
-namespace PipBoyTheme.Demo.Pages;
+namespace PipboyTheme.Demo.Pages;
 
 public partial class UrsaOverviewPage : UserControl
 {

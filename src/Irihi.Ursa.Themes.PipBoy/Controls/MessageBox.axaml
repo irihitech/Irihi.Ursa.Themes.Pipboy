@@ -135,19 +135,16 @@
             <Setter Property="Grid.Column" Value="1" />
             <Setter Property="iri:ClassHelper.Classes" Value="Danger" />
             <Setter Property="Content" Value="{DynamicResource STRING_MENU_DIALOG_NO}" />
-            <Setter Property="Theme" Value="{DynamicResource SolidButton}" />
         </Style>
         <Style Selector="^ /template/ Button#PART_YesButton">
             <Setter Property="Grid.Column" Value="2" />
             <Setter Property="iri:ClassHelper.Classes" Value="Primary" />
             <Setter Property="Content" Value="{DynamicResource STRING_MENU_DIALOG_YES}" />
-            <Setter Property="Theme" Value="{DynamicResource SolidButton}" />
         </Style>
         <Style Selector="^ /template/ Button#PART_OKButton">
             <Setter Property="Grid.Column" Value="3" />
             <Setter Property="iri:ClassHelper.Classes" Value="Primary" />
             <Setter Property="Content" Value="{DynamicResource STRING_MENU_DIALOG_OK}" />
-            <Setter Property="Theme" Value="{DynamicResource SolidButton}" />
         </Style>
         <Style Selector="^[MessageIcon=None] /template/ PathIcon#PART_Icon">
             <Setter Property="IsVisible" Value="False" />
@@ -289,19 +286,16 @@
             <Setter Property="Grid.Column" Value="1" />
             <Setter Property="iri:ClassHelper.Classes" Value="Danger" />
             <Setter Property="Content" Value="{DynamicResource STRING_MENU_DIALOG_NO}" />
-            <Setter Property="Theme" Value="{DynamicResource SolidButton}" />
         </Style>
         <Style Selector="^ /template/ Button#PART_YesButton">
             <Setter Property="Grid.Column" Value="2" />
             <Setter Property="iri:ClassHelper.Classes" Value="Primary" />
             <Setter Property="Content" Value="{DynamicResource STRING_MENU_DIALOG_YES}" />
-            <Setter Property="Theme" Value="{DynamicResource SolidButton}" />
         </Style>
         <Style Selector="^ /template/ Button#PART_OKButton">
             <Setter Property="Grid.Column" Value="3" />
             <Setter Property="iri:ClassHelper.Classes" Value="Primary" />
             <Setter Property="Content" Value="{DynamicResource STRING_MENU_DIALOG_OK}" />
-            <Setter Property="Theme" Value="{DynamicResource SolidButton}" />
         </Style>
         <Style Selector="^[MessageIcon=None] /template/ PathIcon#PART_Icon">
             <Setter Property="IsVisible" Value="False" />

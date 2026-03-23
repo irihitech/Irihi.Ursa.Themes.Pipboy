@@ -4,10 +4,10 @@ using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
-using PipBoyTheme.Demo.ViewModels;
-using PipBoyTheme.Demo.Views;
+using PipboyTheme.Demo.ViewModels;
+using PipboyTheme.Demo.Views;
 
-namespace PipBoyTheme.Demo;
+namespace PipboyTheme.Demo;
 
 public partial class App : Application
 {

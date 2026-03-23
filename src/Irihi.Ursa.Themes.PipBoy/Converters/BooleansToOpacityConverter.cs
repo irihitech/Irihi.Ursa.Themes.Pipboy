@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using Irihi.Avalonia.Shared.Converters;
 
-namespace Irihi.Ursa.Themes.PipBoy.Converters;
+namespace Irihi.Ursa.Themes.Pipboy.Converters;
 
 public class BooleansToOpacityConverter : MarkupValueConverter
 {
