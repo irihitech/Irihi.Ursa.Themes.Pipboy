@@ -114,7 +114,7 @@
     </ControlTheme>
 
     <ControlTheme x:Key="{x:Type u:CaptionButtons}" TargetType="u:CaptionButtons">
-        <Setter Property="Foreground" Value="{DynamicResource CaptionButtonForeground}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
         <Setter Property="Template">
             <ControlTemplate TargetType="u:CaptionButtons">
                 <StackPanel Orientation="Horizontal">
@@ -152,11 +152,11 @@
 
         <Style Selector="^ /template/ Button#PART_CloseButton:pointerover">
             <Setter Property="Foreground" Value="White" />
-            <Setter Property="Background" Value="{DynamicResource CaptionButtonClosePointeroverBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
         <Style Selector="^ /template/ Button#PART_CloseButton:pressed">
             <Setter Property="Foreground" Value="White" />
-            <Setter Property="Background" Value="{DynamicResource CaptionButtonClosePressedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
 
         <Style Selector="^:maximized /template/ PathIcon#PART_RestoreButtonIcon">

@@ -11,24 +11,24 @@
             <ControlTemplate TargetType="u:ScrollToButton">
                 <Border
                     Name="PART_Background"
-                    Background="{DynamicResource ButtonDefaultBackground}"
+                    Background="{DynamicResource PipboySurfaceBrush}"
                     CornerRadius="{DynamicResource ButtonCornerRadius}">
                     <PathIcon
                         Name="PART_Icon"
                         Margin="8"
                         Theme="{StaticResource InnerPathIcon}"
                         Data="{DynamicResource ScrollToButtonIconGlyph}"
-                        Foreground="{DynamicResource ButtonDefaultPrimaryForeground}" />
+                        Foreground="{DynamicResource PipboyPrimaryBrush}" />
                 </Border>
             </ControlTemplate>
         </Setter>
         <Style Selector="^:pointerover /template/ Border#PART_Background">
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultPointeroverBorderBrush}" />
-            <Setter Property="Background" Value="{DynamicResource ButtonDefaultPointeroverBackground}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
         </Style>
         <Style Selector="^:pressed /template/ Border#PART_Background">
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultPressedBorderBrush}" />
-            <Setter Property="Background" Value="{DynamicResource ButtonDefaultPressedBackground}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
         </Style>
         <Style Selector="^[Direction=Right] /template/ PathIcon#PART_Icon">
             <Setter Property="RenderTransform" Value="rotate(90deg)" />
@@ -51,24 +51,24 @@
             <ControlTemplate TargetType="u:ScrollToButton">
                 <Border
                     Name="PART_Background"
-                    Background="{DynamicResource ButtonSolidPrimaryBackground}"
+                    Background="{DynamicResource PipboyPrimaryBrush}"
                     CornerRadius="{DynamicResource ButtonCornerRadius}">
                     <PathIcon
                         Name="PART_Icon"
                         Margin="8"
                         Theme="{StaticResource InnerPathIcon}"
                         Data="{DynamicResource ScrollToButtonIconGlyph}"
-                        Foreground="{DynamicResource ButtonSolidForeground}" />
+                        Foreground="{DynamicResource PipboyTextBrush}" />
                 </Border>
             </ControlTemplate>
         </Setter>
         <Style Selector="^:pointerover /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonSolidPrimaryPointeroverBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidPrimaryPointeroverBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
         </Style>
         <Style Selector="^:pressed /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonSolidPrimaryPressedBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidPrimaryPressedBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
         </Style>
         <Style Selector="^[Direction=Right] /template/ PathIcon#PART_Icon">
             <Setter Property="RenderTransform" Value="rotate(90deg)" />

@@ -8,8 +8,8 @@
 
     <ControlTheme x:Key="{x:Type u:KeyGestureInput}" TargetType="u:KeyGestureInput">
         <Setter Property="MinHeight" Value="{DynamicResource TextBoxDefaultHeight}" />
-        <Setter Property="Background" Value="{DynamicResource TextBoxDefaultBackground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource TextBoxDefaultBorderBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource TextBoxBorderThickness}" />
         <Setter Property="CornerRadius" Value="{DynamicResource TextBoxDefaultCornerRadius}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -33,7 +33,7 @@
                                 DockPanel.Dock="Left"
                                 VerticalAlignment="Stretch"
                                 VerticalContentAlignment="Center"
-                                Foreground="{DynamicResource TextBoxInnerForeground}"
+                                Foreground="{DynamicResource PipboyTextBrush}"
                                 IsVisible="{Binding Path=InnerLeftContent, RelativeSource={RelativeSource TemplatedParent},
                                     Converter={x:Static ObjectConverters.IsNotNull}}" />
                             <ContentPresenter
@@ -43,7 +43,7 @@
                                 Padding="{TemplateBinding Padding, Converter={iri:ThicknessMixerConverter Left}}"
                                 VerticalAlignment="Stretch"
                                 VerticalContentAlignment="Center"
-                                Foreground="{DynamicResource TextBoxInnerForeground}"
+                                Foreground="{DynamicResource PipboyTextBrush}"
                                 IsVisible="{Binding Path=InnerRightContent, RelativeSource={RelativeSource TemplatedParent},
                                     Converter={x:Static ObjectConverters.IsNotNull}}" />
                             <SelectableTextBlock
@@ -66,18 +66,18 @@
             </ControlTemplate>
         </Setter>
         <Style Selector="^:pointerover /template/ Border#Background">
-            <Setter Property="Background" Value="{DynamicResource TextBoxPointeroverBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxPointeroverBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
         <Style Selector="^:pressed /template/ Border#Background">
-            <Setter Property="Background" Value="{DynamicResource TextBoxPressedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
         </Style>
         <Style Selector="^:focus /template/ Border#Background">
-            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxFocusBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderFocusBrush}" />
         </Style>
         <Style Selector="^:focus-within /template/ Border#Background">
-            <Setter Property="Background" Value="{DynamicResource TextBoxPressedBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxFocusBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderFocusBrush}" />
         </Style>
         <Style Selector="^:not(:empty).clearButton, ^:not(:empty).ClearButton">
             <Style Selector="^:focus /template/ Button#PART_ClearButton">

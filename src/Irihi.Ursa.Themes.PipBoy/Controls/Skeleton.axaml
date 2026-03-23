@@ -24,7 +24,7 @@
                             x:Name="PART_LoadingBorder"
                             Classes.Active="{Binding Path= IsActive, RelativeSource={RelativeSource TemplatedParent}}"
                             IsHitTestVisible="{TemplateBinding IsLoading}"
-                            Background="{DynamicResource SkeletonDefaultBackground}"
+                            Background="{DynamicResource PipboySurfaceHighBrush}"
                             IsVisible="{TemplateBinding IsLoading}" />
                         <iri:PureRectangle
                             x:Name="PART_ActiveBorder"

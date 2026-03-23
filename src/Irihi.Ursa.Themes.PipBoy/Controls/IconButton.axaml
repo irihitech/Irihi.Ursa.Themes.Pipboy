@@ -169,9 +169,9 @@
     <ControlTheme x:Key="BaseIconButton" TargetType="ContentControl">
         <Setter Property="Padding" Value="{DynamicResource ButtonDefaultPadding}" />
         <Setter Property="MinHeight" Value="{DynamicResource ButtonDefaultHeight}" />
-        <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultPrimaryForeground}" />
-        <Setter Property="Background" Value="{DynamicResource ButtonDefaultBackground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultBorderBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThickness}" />
         <Setter Property="CornerRadius" Value="{DynamicResource ButtonCornerRadius}" />
         <Setter Property="HorizontalAlignment" Value="Center" />
@@ -190,45 +190,45 @@
         </Style>
 
         <Style Selector="^.Primary /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultPrimaryForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Secondary /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultSecondaryForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
         </Style>
         <Style Selector="^.Tertiary /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultTertiaryForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
         </Style>
         <Style Selector="^.Success /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultSuccessForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboySuccessBrush}" />
         </Style>
         <Style Selector="^.Warning /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultWarningForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyWarningBrush}" />
         </Style>
         <Style Selector="^.Danger /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultDangerForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
 
         <Style Selector="^.Colorful">
             <Style Selector="^.Primary /template/ ContentPresenter#PART_ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultColorfulPrimaryForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
         </Style>
 
         <Style Selector="^:pointerover /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonDefaultPointeroverBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultPointeroverBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
 
         <Style Selector="^:pressed /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonDefaultPressedBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultPressedBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
 
         <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultDisabledForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
         </Style>
         <Style Selector="^:disabled /template/ Border#PART_Background">
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultDisabledBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
 
         <Style Selector="^.Large">
@@ -270,229 +270,229 @@
         <!-- Copy to IconToggleButton:checked -->
         <Setter Property="FocusAdorner">
             <FocusAdornerTemplate>
-                <Border Theme="{DynamicResource AdornerLayerBorder}"
+                <Border Theme="{DynamicResource PipboyBorderBrush}"
                         Classes="Solid" />
             </FocusAdornerTemplate>
         </Setter>
-        <Setter Property="Foreground" Value="{DynamicResource ButtonSolidForeground}" />
-        <Setter Property="Background" Value="{DynamicResource ButtonSolidPrimaryBackground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidPrimaryBorderBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryBrush}" />
 
         <Style Selector="^:pointerover /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonSolidPrimaryPointeroverBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidPrimaryPointeroverBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
         </Style>
         <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonSolidPrimaryPressedForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
         </Style>
         <Style Selector="^:pressed /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonSolidPrimaryPressedBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidPrimaryPressedBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
         </Style>
 
         <Style Selector="^.Primary">
             <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ButtonSolidForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidPrimaryBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidPrimaryBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^:pointerover /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidPrimaryPointeroverBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidPrimaryPointeroverBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
             </Style>
             <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ButtonSolidPrimaryPressedForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             </Style>
             <Style Selector="^:pressed /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidPrimaryPressedBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidPrimaryPressedBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
             </Style>
         </Style>
         <Style Selector="^.Secondary">
             <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ButtonSolidForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidSecondaryBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidSecondaryBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySurfaceHighBrush}" />
             </Style>
             <Style Selector="^:pointerover /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidSecondaryPointeroverBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidSecondaryPointeroverBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^:pressed /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidSecondaryPressedBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidSecondaryPressedBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyBackgroundBrush}" />
             </Style>
         </Style>
         <Style Selector="^.Tertiary">
             <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ButtonSolidForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidTertiaryBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidTertiaryBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySurfaceHighBrush}" />
             </Style>
             <Style Selector="^:pointerover /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidTertiaryPointeroverBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidTertiaryPointeroverBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^:pressed /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidTertiaryPressedBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidTertiaryPressedBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyBackgroundBrush}" />
             </Style>
         </Style>
         <Style Selector="^.Success">
             <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ButtonSolidForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidSuccessBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidSuccessBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^:pointerover /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidSuccessPointeroverBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidSuccessPointeroverBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^:pressed /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidSuccessPressedBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidSuccessPressedBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
         </Style>
         <Style Selector="^.Warning">
             <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ButtonSolidForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidWarningBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidWarningBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^:pointerover /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidWarningPointeroverBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidWarningPointeroverBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^:pressed /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidWarningPressedBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidWarningPressedBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
         </Style>
         <Style Selector="^.Danger">
             <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ButtonSolidForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidDangerBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidDangerBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
             <Style Selector="^:pointerover /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidDangerPointeroverBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidDangerPointeroverBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
             <Style Selector="^:pressed /template/ Border#PART_Background">
-                <Setter Property="Background" Value="{DynamicResource ButtonSolidDangerPressedBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidDangerPressedBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
         </Style>
         <Style Selector="^.Colorful">
             <Style Selector="^.Primary">
                 <Style Selector="^ /template/ Border#PART_Background">
-                    <Setter Property="Background" Value="{DynamicResource ButtonSolidColorfulPrimaryBackground}" />
-                    <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidColorfulPrimaryBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryBrush}" />
                 </Style>
                 <Style Selector="^:pointerover /template/ Border#PART_Background">
-                    <Setter Property="Background" Value="{DynamicResource ButtonSolidColorfulPrimaryPointeroverBackground}" />
-                    <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidColorfulPrimaryPointeroverBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
                 </Style>
                 <Style Selector="^:pressed /template/ Border#PART_Background">
-                    <Setter Property="Background" Value="{DynamicResource ButtonSolidColorfulPrimaryPressedBackground}" />
-                    <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidColorfulPrimaryPressedBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryDarkBrush}" />
                 </Style>
             </Style>
             <Style Selector="^.Tertiary">
                 <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
-                    <Setter Property="Foreground" Value="{DynamicResource ButtonSolidColorfulTertiaryForeground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
                 </Style>
                 <Style Selector="^ /template/ Border#PART_Background">
-                    <Setter Property="Background" Value="{DynamicResource ButtonSolidColorfulTertiaryBackground}" />
-                    <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidColorfulTertiaryBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource PipboySurfaceHighBrush}" />
                 </Style>
                 <Style Selector="^:pointerover /template/ Border#PART_Background">
-                    <Setter Property="Background" Value="{DynamicResource ButtonSolidColorfulTertiaryPointeroverBackground}" />
-                    <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidColorfulTertiaryPointeroverBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource PipboySurfaceBrush}" />
                 </Style>
                 <Style Selector="^:pressed /template/ Border#PART_Background">
-                    <Setter Property="Background" Value="{DynamicResource ButtonSolidColorfulTertiaryPressedBackground}" />
-                    <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidColorfulTertiaryPressedBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource PipboySurfaceBrush}" />
                 </Style>
             </Style>
         </Style>
 
         <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonSolidDisabledForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
         </Style>
         <Style Selector="^:disabled /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonSolidDisabledBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidDisabledBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
     </ControlTheme>
 
     <ControlTheme x:Key="BaseOutlineIconButton" TargetType="ContentControl" BasedOn="{StaticResource BaseIconButton}">
         <!-- Copy to IconToggleButton:indeterminate -->
         <Style Selector="^ /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonOutlineBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonOutlineBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
         <Style Selector="^:pointerover /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonOutlinePointeroverBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonOutlineBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
         <Style Selector="^:pressed /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonOutlinePressedBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonOutlineBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
 
         <Style Selector="^.Success /template/ Border#PART_Background">
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonOutlineSuccessBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboySuccessBrush}" />
         </Style>
         <Style Selector="^.Warning /template/ Border#PART_Background">
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonOutlineWarningBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyWarningBrush}" />
         </Style>
         <Style Selector="^.Danger /template/ Border#PART_Background">
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonOutlineDangerBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
         <Style Selector="^.Colorful">
             <Style Selector="^.Primary">
                 <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
-                    <Setter Property="Foreground" Value="{DynamicResource ButtonOutlineColorfulPrimaryForeground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
                 </Style>
                 <Style Selector="^ /template/ Border#PART_Background">
-                    <Setter Property="BorderBrush" Value="{DynamicResource ButtonOutlineColorfulPrimaryBorderBrush}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryBrush}" />
                 </Style>
             </Style>
         </Style>
 
         <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultDisabledForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
         </Style>
         <Style Selector="^:disabled /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonOutlineBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonOutlineBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
     </ControlTheme>
 
     <ControlTheme x:Key="BaseBorderlessIconButton" TargetType="ContentControl" BasedOn="{StaticResource BaseIconButton}">
         <Style Selector="^ /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonBorderlessBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderlessBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
         <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultDisabledForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
         </Style>
         <Style Selector="^:disabled /template/ Border#PART_Background">
-            <Setter Property="Background" Value="{DynamicResource ButtonBorderlessBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderlessBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
     </ControlTheme>
 

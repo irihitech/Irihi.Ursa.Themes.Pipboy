@@ -37,7 +37,7 @@
                         Height="1"
                         Margin="0,8"
                         HorizontalAlignment="Stretch"
-                        Fill="{DynamicResource FormGroupForeground}"
+                        Fill="{DynamicResource PipboyTextDimBrush}"
                         IsVisible="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Header, Converter={x:Static ObjectConverters.IsNotNull}}" />
                     <ItemsPresenter
                         ItemsPanel="{TemplateBinding ItemsPanel}" />
@@ -64,7 +64,7 @@
                             FontWeight="{DynamicResource TextBlockTitleFontWeight}"
                             Target="{Binding #PART_ContentPresenter.Content}" />
                         <TextBlock
-                            Foreground="{DynamicResource FormAsteriskForeground}"
+                            Foreground="{DynamicResource PipboyErrorBrush}"
                             IsVisible="{TemplateBinding IsRequired}"
                             Text="*" />
                     </StackPanel>
@@ -99,7 +99,7 @@
                                     Background="Transparent"
                                     FontWeight="{DynamicResource TextBlockTitleFontWeight}" />
                                 <TextBlock
-                                    Foreground="{DynamicResource FormAsteriskForeground}"
+                                    Foreground="{DynamicResource PipboyErrorBrush}"
                                     IsVisible="{TemplateBinding IsRequired}"
                                     Text="*" />
                             </StackPanel>

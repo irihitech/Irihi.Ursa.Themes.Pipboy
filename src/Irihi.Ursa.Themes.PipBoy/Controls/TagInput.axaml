@@ -22,8 +22,8 @@
                     MinHeight="30"
                     Padding="8,4"
                     VerticalAlignment="Stretch"
-                    Background="{DynamicResource TextBoxDefaultBackground}"
-                    BorderBrush="{DynamicResource TextBoxDefaultBorderBrush}"
+                    Background="{DynamicResource PipboySurfaceBrush}"
+                    BorderBrush="{DynamicResource PipboyBorderBrush}"
                     BorderThickness="{DynamicResource TextBoxBorderThickness}"
                     CornerRadius="{DynamicResource TextBoxDefaultCornerRadius}">
                     <Panel HorizontalAlignment="Stretch">
@@ -54,22 +54,22 @@
             <Setter Property="IsVisible" Value="True" />
         </Style>
         <Style Selector="^:pointerover /template/ Border#PART_BackgroundBorder">
-            <Setter Property="Background" Value="{DynamicResource TextBoxPointeroverBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxPointeroverBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
         <Style Selector="^:focus-within /template/ Border#PART_BackgroundBorder">
-            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxFocusBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderFocusBrush}" />
         </Style>
     </ControlTheme>
 
     <ControlTheme x:Key="TagInputTextBoxTheme" TargetType="TextBox">
-        <Setter Property="Foreground" Value="{DynamicResource TextBoxForeground}" />
-        <Setter Property="Background" Value="{DynamicResource TextBoxDefaultBackground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource TextBoxDefaultBorderBrush}" />
-        <Setter Property="SelectionBrush" Value="{DynamicResource TextBoxSelectionBackground}" />
-        <Setter Property="SelectionForegroundBrush" Value="{DynamicResource TextBoxSelectionForeground}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
+        <Setter Property="SelectionBrush" Value="{DynamicResource PipboySelectionBrush}" />
+        <Setter Property="SelectionForegroundBrush" Value="{DynamicResource PipboyTextBrush}" />
         <Setter Property="Cursor" Value="Ibeam" />
-        <Setter Property="CaretBrush" Value="{DynamicResource TextBoxTextCaretBrush}" />
+        <Setter Property="CaretBrush" Value="{DynamicResource PipboyTextBrush}" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="ScrollViewer.IsScrollChainingEnabled" Value="True" />
@@ -109,9 +109,9 @@
 
     <ControlTheme x:Key="{x:Type u:ClosableTag}" TargetType="u:ClosableTag">
         <Setter Property="VerticalAlignment" Value="Stretch" />
-        <Setter Property="Foreground" Value="{DynamicResource ClosableTagForeground}" />
-        <Setter Property="Background" Value="{DynamicResource ClosableTagBackground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ClosableTagBorder}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Template">

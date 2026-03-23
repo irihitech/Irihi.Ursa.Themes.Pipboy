@@ -97,7 +97,7 @@
                         Theme="{StaticResource InnerPathIcon}"
                         Margin="4,0, 8 0"
                         Data="{DynamicResource NavigationMenuItemExpandIconGlyph}"
-                        Foreground="{DynamicResource NavigationMenuItemExpandIconForeground}">
+                        Foreground="{DynamicResource PipboyTextDimBrush}">
                         <PathIcon.Transitions>
                             <Transitions>
                                 <TransformOperationsTransition Property="RenderTransform" Duration="0.2" />
@@ -114,8 +114,8 @@
                             Margin="{DynamicResource NavigationMenuItemFlyoutMargin}"
                             Padding="{DynamicResource MenuFlyoutPadding}"
                             HorizontalAlignment="Stretch"
-                            Background="{DynamicResource MenuFlyoutBackground}"
-                            BorderBrush="{DynamicResource MenuFlyoutBorderBrush}"
+                            Background="{DynamicResource PipboySurfaceBrush}"
+                            BorderBrush="{DynamicResource PipboyBorderBrush}"
                             BorderThickness="{DynamicResource MenuFlyoutBorderThickness}"
                             BoxShadow="{DynamicResource MenuFlyoutBorderBoxShadow}"
                             CornerRadius="{DynamicResource MenuFlyoutCornerRadius}">
@@ -162,15 +162,15 @@
         </Setter>
         <Setter Property="Template" Value="{StaticResource DefaultNavMenuItemTemplate}" />
         <Style Selector="^:selected">
-            <Setter Property="Foreground" Value="{DynamicResource ListBoxItemSelectedForeground}" />
-            <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             <Style Selector="^:pointerover">
-                <Setter Property="Foreground" Value="{DynamicResource ListBoxItemSelectedForeground}" />
-                <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedPointeroverBackground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             </Style>
             <Style Selector="^:focus">
-                <Setter Property="Foreground" Value="{DynamicResource ListBoxItemSelectedForeground}" />
-                <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedBackground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             </Style>
         </Style>
         <Style Selector="^:vertical-collapsed /template/ ItemsPresenter#PART_ItemsPresenter">
@@ -188,22 +188,22 @@
             <Setter Property="IsVisible" Value="False" />
         </Style>
         <Style Selector="^ /template/ Border#PART_Border:pointerover">
-            <Setter Property="Background" Value="{DynamicResource ListBoxItemPointeroverBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
         </Style>
         <Style Selector="^ /template/ ContentPresenter#PART_HeaderPresenter:pointerover">
-            <Setter Property="Foreground" Value="{DynamicResource ListBoxItemPointeroverForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
         </Style>
         <Style Selector="^:focus /template/ Border#PART_Border">
-            <Setter Property="Background" Value="{DynamicResource ListBoxItemPointeroverBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
         </Style>
         <Style Selector="^:focus /template/ ContentPresenter#PART_HeaderPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ListBoxItemPointeroverForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
         </Style>
         <Style Selector="^:selected:focus /template/ Border#PART_Border">
-            <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
         </Style>
         <Style Selector="^:selected:focus /template/ ContentPresenter#PART_HeaderPresenter">
-            <Setter Property="Foreground" Value="{DynamicResource ListBoxItemSelectedForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
         </Style>
         <Style Selector="^:horizontal-collapsed:first-level">
             <Setter Property="HorizontalAlignment" Value="Stretch" />
@@ -218,7 +218,7 @@
                 <Setter Property="HorizontalAlignment" Value="Stretch" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Border:pointerover">
-                <Setter Property="Background" Value="{DynamicResource ListBoxItemPointeroverBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
             </Style>
             <Style Selector="^ /template/ ContentPresenter#PART_IconPresenter">
                 <Setter Property="Grid.ColumnSpan" Value="3" />
@@ -270,7 +270,7 @@
                             Height="{DynamicResource NavigationMenuSeparatorBorderHeight}"
                             Margin="{DynamicResource NavigationMenuSeparatorBorderMargin}"
                             HorizontalAlignment="Stretch"
-                            Fill="{DynamicResource NavigationMenuItemSeparatorBorderForeground}" />
+                            Fill="{DynamicResource PipboyBorderBrush}" />
                     </StackPanel>
                 </ControlTemplate>
             </Setter>

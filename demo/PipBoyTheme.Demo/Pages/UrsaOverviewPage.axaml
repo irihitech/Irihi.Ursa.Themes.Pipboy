@@ -14,8 +14,8 @@
         EnableFlicker="False"
         EnableNoise="True"
         EnableScanBeam="True"
-        EnableScanlines="True"
         EnableScanlineAnimation="False"
+        EnableScanlines="True"
         EnableVignette="True"
         NoiseDensity="0.015"
         NoiseOpacity="0.04"
@@ -24,14 +24,256 @@
         ScanlineOpacity="0.22"
         ScanlineSpacing="3"
         VignetteIntensity="0.38">
-        
+
         <Panel>
-            <StackPanel>
-                <Button Width="150" Content="Dialog" Click="Button_OnClick"></Button>
-                <u:NumericIntUpDown />
-                <u:DateTimePicker />
-                
-            </StackPanel>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="12" Spacing="8">
+                    <!--  Welcome Banner  -->
+                    <u:Banner
+                        Classes="Bordered"
+                        Content="Aesthetic revolution of productivity. Explore Ursa controls below."
+                        Header="Welcome to Ursa.Avalonia!"
+                        Type="Information" />
+
+                    <!--  Marquee  -->
+                    <u:Marquee
+                        Height="40"
+                        Content="This is a scrolling marquee text - Ursa.Avalonia UI Library"
+                        Speed="40" />
+
+                    <Grid ColumnDefinitions="*, *, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto">
+                        <!--  Row 0 - Avatars, Badges, Button Groups  -->
+                        <HeaderedContentControl
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Classes="groupbox"
+                            Header="Avatars">
+                            <StackPanel Orientation="Horizontal" Spacing="4">
+                                <u:Avatar Classes="Red Small" Content="R" />
+                                <u:Avatar Classes="Blue Small" Content="B" />
+                                <u:Avatar Classes="Green Small" Content="G" />
+                                <u:Avatar Classes="Square Orange Small" Content="S" />
+                            </StackPanel>
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Classes="groupbox"
+                            Header="Badges">
+                            <WrapPanel Orientation="Horizontal">
+                                <u:Badge Classes="Primary" Header="5">
+                                    <u:Avatar Classes="Blue Small" Content="A" />
+                                </u:Badge>
+                                <u:Badge
+                                    Classes="Success"
+                                    Header="99"
+                                    OverflowCount="50">
+                                    <u:Avatar Classes="Green Small" Content="B" />
+                                </u:Badge>
+                                <u:Badge Classes="Warning" Dot="True">
+                                    <u:Avatar Classes="Amber Small" Content="C" />
+                                </u:Badge>
+                            </WrapPanel>
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Classes="groupbox"
+                            Header="Button Groups">
+                            <StackPanel Spacing="6">
+                                <u:ButtonGroup Classes="Primary Small" ItemsSource="{Binding ButtonGroupItems}" />
+                                <u:ButtonGroup Classes="Success Small" ItemsSource="{Binding ButtonGroupItems}" />
+                            </StackPanel>
+                        </HeaderedContentControl>
+
+                        <!--  Row 1 - Icon Buttons, Rating, Dividers  -->
+                        <HeaderedContentControl
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Classes="groupbox"
+                            Header="Icon Buttons">
+                            <StackPanel Orientation="Horizontal" Spacing="4">
+                                <u:IconButton Classes="Small" Icon="{StaticResource SemiIconCamera}" />
+                                <u:IconButton Classes="Secondary Small" Icon="{StaticResource SemiIconStar}" />
+                                <u:IconButton Classes="Warning Small" Icon="{StaticResource SemiIconLikeHeart}" />
+                            </StackPanel>
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Classes="groupbox"
+                            Header="Rating">
+                            <u:Rating
+                                AllowHalf="True"
+                                Classes="Small"
+                                Value="{Binding RatingValue}" />
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Classes="groupbox"
+                            Header="Dual Badge">
+                            <u:DualBadge Header="v">1.0</u:DualBadge>
+                        </HeaderedContentControl>
+
+                        <!--  Row 2 - IPv4Box, NumericUpDown, Slider  -->
+                        <HeaderedContentControl
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Classes="groupbox"
+                            Header="IPv4Box">
+                            <u:IPv4Box Width="180" IPAddress="{Binding IpAddress}" />
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Classes="groupbox"
+                            Header="NumericUpDown">
+                            <NumericUpDown Width="120" Value="{Binding SliderValue}" />
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            Classes="groupbox"
+                            Header="Slider">
+                            <Slider
+                                Maximum="100"
+                                Minimum="0"
+                                Value="{Binding SliderValue}" />
+                        </HeaderedContentControl>
+
+                        <!--  Row 3 - RangeSlider, MultiComboBox, TreeComboBox  -->
+                        <HeaderedContentControl
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Classes="groupbox"
+                            Header="RangeSlider">
+                            <u:RangeSlider
+                                LowerValue="{Binding LowerValue}"
+                                Maximum="100"
+                                Minimum="0"
+                                UpperValue="{Binding UpperValue}" />
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Classes="groupbox"
+                            Header="MultiComboBox">
+                            <u:MultiComboBox
+                                Width="180"
+                                ItemsSource="{Binding ComboBoxItems}"
+                                Watermark="Select..." />
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="3"
+                            Grid.Column="2"
+                            Classes="groupbox"
+                            Header="TreeComboBox">
+                            <u:TreeComboBox Width="180" Watermark="Select...">
+                                <u:TreeComboBoxItem Header="Item 1">
+                                    <u:TreeComboBoxItem Header="Sub 1" />
+                                    <u:TreeComboBoxItem Header="Sub 2" />
+                                </u:TreeComboBoxItem>
+                                <u:TreeComboBoxItem Header="Item 2" />
+                            </u:TreeComboBox>
+                        </HeaderedContentControl>
+
+                        <!--  Row 4 - TagInput, MultiAutoCompleteBox, Breadcrumb  -->
+                        <HeaderedContentControl
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Classes="groupbox"
+                            Header="TagInput">
+                            <u:TagInput
+                                Width="180"
+                                Watermark="Add tags..."
+                                Tags="{Binding TagItems}" />
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Classes="groupbox"
+                            Header="MultiAutoComplete">
+                            <u:MultiAutoCompleteBox
+                                Width="180"
+                                ItemsSource="{Binding AutoCompleteItems}"
+                                Watermark="Type...">
+                                <u:MultiAutoCompleteBox.ItemTemplate>
+                                    <DataTemplate DataType="pages:ControlData">
+                                        <TextBlock Text="{Binding MenuHeader}" />
+                                    </DataTemplate>
+                                </u:MultiAutoCompleteBox.ItemTemplate>
+                            </u:MultiAutoCompleteBox>
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl
+                            Grid.Row="4"
+                            Grid.Column="2"
+                            Classes="groupbox"
+                            Header="Breadcrumb">
+                            <u:Breadcrumb>
+                                <TextBlock Text="Home" />
+                                <TextBlock Text="Ursa" />
+                                <TextBlock Text="Intro" />
+                            </u:Breadcrumb>
+                        </HeaderedContentControl>
+                    </Grid>
+
+                    <!--  Date and Time Pickers Row  -->
+                    <Grid ColumnDefinitions="*, *, *" RowDefinitions="Auto">
+                        <HeaderedContentControl Grid.Column="0" Classes="groupbox" Header="DateRangePicker">
+                            <u:DateRangePicker
+                                Width="220"
+                                SelectedEndDate="{Binding EndDate}"
+                                SelectedStartDate="{Binding StartDate}" />
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl Grid.Column="1" Classes="groupbox" Header="DateTimePicker">
+                            <u:DateTimePicker Width="220" SelectedDate="{Binding DateTime}" />
+                        </HeaderedContentControl>
+
+                        <HeaderedContentControl Grid.Column="2" Classes="groupbox" Header="TimeRangePicker">
+                            <u:TimeRangePicker
+                                Width="220"
+                                EndTime="{Binding EndTime}"
+                                StartTime="{Binding StartTime}" />
+                        </HeaderedContentControl>
+                    </Grid>
+
+                    <!--  ToolBar  -->
+                    <HeaderedContentControl Classes="groupbox" Header="ToolBar">
+                        <u:ToolBar Header="Actions">
+                            <Button Classes="Small" Content="Save" />
+                            <u:ToolBarSeparator />
+                            <Button Classes="Small" Content="Load" />
+                            <Button Classes="Small" Content="Delete" />
+                        </u:ToolBar>
+                    </HeaderedContentControl>
+
+                    <!--  Pagination  -->
+                    <HeaderedContentControl Classes="groupbox" Header="Pagination">
+                        <u:Pagination
+                            HorizontalAlignment="Center"
+                            PageSizeOptions="10, 20, 50"
+                            ShowPageSizeSelector="True"
+                            TotalCount="500" />
+                    </HeaderedContentControl>
+                    
+                    <!-- Dialog -->
+                    <HeaderedContentControl Classes="groupbox" Header="MessageBox">
+                        <Button Content="Click To Open MessageBox" Click="Button_OnClick" />
+                    </HeaderedContentControl>
+                </StackPanel>
+            </ScrollViewer>
             <u:OverlayDialogHost />
         </Panel>
         

@@ -3,8 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:u="https://irihi.tech/ursa">
     <ControlTheme x:Key="{x:Type u:RangeSlider}" TargetType="u:RangeSlider">
-        <Setter Property="Background" Value="{DynamicResource SliderTrackBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource SliderTrackForeground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
         <Setter Property="TrackWidth" Value="4" />
         <Style Selector="^:horizontal">
             <Setter Property="Template">
@@ -26,7 +26,7 @@
                                 Height="{DynamicResource SliderTickHorizontalHeight}"
                                 Margin="0,0,0,4"
                                 VerticalAlignment="Bottom"
-                                Fill="{DynamicResource SliderTickForeground}"
+                                Fill="{DynamicResource PipboyBorderBrush}"
                                 IsVisible="False"
                                 Maximum="{TemplateBinding u:RangeSlider.Maximum}"
                                 Minimum="{TemplateBinding u:RangeSlider.Minimum}"
@@ -40,7 +40,7 @@
                                 Height="{DynamicResource SliderTickHorizontalHeight}"
                                 Margin="0,4,0,0"
                                 VerticalAlignment="Top"
-                                Fill="{DynamicResource SliderTickForeground}"
+                                Fill="{DynamicResource PipboyBorderBrush}"
                                 IsVisible="False"
                                 Maximum="{TemplateBinding u:RangeSlider.Maximum}"
                                 Minimum="{TemplateBinding u:RangeSlider.Minimum}"
@@ -105,7 +105,7 @@
                         <Grid
                             x:Name="SliderContainer"
                             Margin="{TemplateBinding Padding}"
-                            Background="{DynamicResource SliderContainerBackground}"
+                            Background="{DynamicResource PipboySurfaceBrush}"
                             ColumnDefinitions="Auto,Auto,Auto">
                             <Grid.Styles>
                                 <Style Selector="TickBar">
@@ -118,7 +118,7 @@
                                 Width="{DynamicResource SliderTickVerticalWidth}"
                                 Margin="0,0,4,0"
                                 HorizontalAlignment="Right"
-                                Fill="{DynamicResource SliderTickForeground}"
+                                Fill="{DynamicResource PipboyBorderBrush}"
                                 IsVisible="False"
                                 Maximum="{TemplateBinding u:RangeSlider.Maximum}"
                                 Minimum="{TemplateBinding u:RangeSlider.Minimum}"
@@ -132,7 +132,7 @@
                                 Width="{DynamicResource SliderTickVerticalWidth}"
                                 Margin="4,0,0,0"
                                 HorizontalAlignment="Left"
-                                Fill="{DynamicResource SliderTickForeground}"
+                                Fill="{DynamicResource PipboyBorderBrush}"
                                 IsVisible="False"
                                 Maximum="{TemplateBinding u:RangeSlider.Maximum}"
                                 Minimum="{TemplateBinding u:RangeSlider.Minimum}"
@@ -207,20 +207,20 @@
         </Style>
 
         <Style Selector="^:error /template/ Thumb#thumb">
-            <Setter Property="BorderBrush" Value="{DynamicResource DataValidationErrorsSelectedBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
 
         <Style Selector="^:disabled">
             <Style Selector="^ /template/ Border#PART_InnerSection">
-                <Setter Property="Background" Value="{DynamicResource SliderTrackDisabledForeground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyDisabledBrush}" />
             </Style>
 
             <Style Selector="^ /template/ Border#PART_UpperSection, ^ /template/ Border#PART_LowerSection">
-                <Setter Property="Background" Value="{DynamicResource SliderTrackDisabledBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
             </Style>
 
             <Style Selector="^ /template/ Thumb">
-                <Setter Property="BorderBrush" Value="{DynamicResource SliderThumbDisabledBorderBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyDisabledBrush}" />
             </Style>
         </Style>
     </ControlTheme>
