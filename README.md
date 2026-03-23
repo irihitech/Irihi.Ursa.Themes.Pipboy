@@ -1,6 +1,6 @@
 # Irihi.Ursa.Themes.Pipboy
 
-`Irihi.Ursa.Themes.Pipboy` is an Avalonia theme library that adapts **Ursa** controls to a **Pipboy-inspired** visual style.
+`Irihi.Ursa.Themes.Pipboy` is an Avalonia theme library that adapts **[Ursa](https://github.com/irihitech/Ursa.Avalonia)** controls to a **[Pipboy](https://github.com/NeverMorewd/Pipboy.Avalonia)**-inspired visual style.
 
 This repository contains:
 
