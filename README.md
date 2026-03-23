@@ -1,13 +1,13 @@
-# Irihi.Ursa.Themes.PipBoy
+# Irihi.Ursa.Themes.Pipboy
 
-`Irihi.Ursa.Themes.PipBoy` is an Avalonia theme library that adapts **Ursa** controls to a **PipBoy-inspired** visual style.
+`Irihi.Ursa.Themes.Pipboy` is an Avalonia theme library that adapts **Ursa** controls to a **Pipboy-inspired** visual style.
 
 This repository contains:
 
-- a reusable theme library in `src/Irihi.Ursa.Themes.PipBoy`
-- a desktop demo app in `demo/PipBoyTheme.Demo`
+- a reusable theme library in `src/Irihi.Ursa.Themes.Pipboy`
+- a desktop demo app in `demo/PipboyTheme.Demo`
 
-The demo combines the base `PipboyTheme` with `UrsaPipboyTheme` so Ursa controls render consistently inside the PipBoy-styled UI.
+The demo combines the base `PipboyTheme` with `UrsaPipboyTheme` so Ursa controls render consistently inside the Pipboy-styled UI.
 
 ## Requirements
 
@@ -36,14 +36,14 @@ The demo app additionally uses:
 
 ```text
 src/
-  Irihi.Ursa.Themes.PipBoy/
+  Irihi.Ursa.Themes.Pipboy/
 	Controls/            # Ursa control style overrides and resources
 	Locale/              # Localized resource dictionaries
 	UrsaPipboyTheme.axaml
 	UrsaPipboyTheme.axaml.cs
 
 demo/
-  PipBoyTheme.Demo/
+  PipboyTheme.Demo/
 	App.axaml            # Registers PipboyTheme + UrsaPipboyTheme
 	Views/MainWindow.axaml
 	Pages/OverviewPage.axaml
@@ -52,7 +52,7 @@ demo/
 
 ## Using the theme in an Avalonia app
 
-Add a reference to the theme library project, then register both the base PipBoy theme and the Ursa overlay theme in your application styles.
+Add a reference to the theme library project, then register both the base Pipboy theme and the Ursa overlay theme in your application styles.
 
 ### Example `App.axaml`
 
@@ -61,7 +61,7 @@ Add a reference to the theme library project, then register both the base PipBoy
 	xmlns="https://github.com/avaloniaui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:pipboy="clr-namespace:Pipboy.Avalonia;assembly=Pipboy.Avalonia"
-	xmlns:pipboyUrsa="clr-namespace:Irihi.Ursa.Themes.Pipboy;assembly=Irihi.Ursa.Themes.PipBoy">
+	xmlns:pipboyUrsa="clr-namespace:Irihi.Ursa.Themes.Pipboy;assembly=Irihi.Ursa.Themes.Pipboy">
 
 	<Application.Styles>
 		<pipboy:PipboyTheme />
@@ -83,14 +83,14 @@ Currently discoverable locale dictionaries:
 
 Relevant implementation:
 
-- `src/Irihi.Ursa.Themes.PipBoy/UrsaPipboyTheme.axaml.cs`
+- `src/Irihi.Ursa.Themes.Pipboy/UrsaPipboyTheme.axaml.cs`
 
 ## Demo app
 
 The demo app shows:
 
-- core PipBoy-styled layout and navigation
-- an overview page for the base PipBoy look-and-feel
+- core Pipboy-styled layout and navigation
+- an overview page for the base Pipboy look-and-feel
 - an Ursa showcase page with themed controls such as `Banner`, `Marquee`, `Avatar`, `Badge`, `ButtonGroup`, `Rating`, `RangeSlider`, `MultiComboBox`, `TreeComboBox`, `TagInput`, `DateRangePicker`, `ToolBar`, and `Pagination`
 
 ### Run the demo
@@ -98,7 +98,7 @@ The demo app shows:
 From the repository root:
 
 ```powershell
-dotnet run --project .\demo\PipBoyTheme.Demo\PipBoyTheme.Demo.csproj
+dotnet run --project .\demo\PipboyTheme.Demo\PipboyTheme.Demo.csproj
 ```
 
 ## Build
@@ -106,19 +106,19 @@ dotnet run --project .\demo\PipBoyTheme.Demo\PipBoyTheme.Demo.csproj
 Library build:
 
 ```powershell
-dotnet build .\src\Irihi.Ursa.Themes.PipBoy\Irihi.Ursa.Themes.PipBoy.csproj -nologo
+dotnet build .\src\Irihi.Ursa.Themes.Pipboy\Irihi.Ursa.Themes.Pipboy.csproj -nologo
 ```
 
 Demo build:
 
 ```powershell
-dotnet build .\demo\PipBoyTheme.Demo\PipBoyTheme.Demo.csproj -nologo
+dotnet build .\demo\PipboyTheme.Demo\PipboyTheme.Demo.csproj -nologo
 ```
 
 If the demo is already running, the default demo output folder can be locked by the active `.NET Host` process. In that case, build to an alternate output directory:
 
 ```powershell
-dotnet build .\demo\PipBoyTheme.Demo\PipBoyTheme.Demo.csproj -nologo -p:OutDir=".\artifacts\verify-demo\"
+dotnet build .\demo\PipboyTheme.Demo\PipboyTheme.Demo.csproj -nologo -p:OutDir=".\artifacts\verify-demo\"
 ```
 
 ## Control resource composition
@@ -134,7 +134,7 @@ dotnet build .\demo\PipBoyTheme.Demo\PipBoyTheme.Demo.csproj -nologo -p:OutDir="
 
 - Demo pages use `HeaderedContentControl` with `Classes="groupbox"` for section containers.
 - The main library entry point is `UrsaPipboyTheme`.
-- The demo registers both themes in `demo/PipBoyTheme.Demo/App.axaml`.
+- The demo registers both themes in `demo/PipboyTheme.Demo/App.axaml`.
 
 ## Status
 
