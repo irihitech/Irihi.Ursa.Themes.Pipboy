@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:Pipboy="clr-namespace:Pipboy.Avalonia;assembly=Pipboy.Avalonia"
              xmlns:u="https://irihi.tech/ursa"
+             xmlns:pages="clr-namespace:PipboyTheme.Demo.Pages"
              mc:Ignorable="d" d:DesignWidth="800"
+             x:DataType="pages:OverviewDemoViewModel"
              d:DesignHeight="450"
              x:Class="PipboyTheme.Demo.Pages.UrsaOverviewPage">
     <Pipboy:CrtDisplay
