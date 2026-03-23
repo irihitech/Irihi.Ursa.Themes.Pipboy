@@ -3,6 +3,7 @@
              x:Class="PipBoyTheme.Demo.App"
              xmlns:local="using:PipBoyTheme.Demo"
              xmlns:pipboy="clr-namespace:Pipboy.Avalonia;assembly=Pipboy.Avalonia"
+             xmlns:pipBoy="clr-namespace:Irihi.Ursa.Themes.PipBoy;assembly=Irihi.Ursa.Themes.PipBoy"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
@@ -12,5 +13,6 @@
   
     <Application.Styles>
         <pipboy:PipboyTheme />
+        <pipBoy:UrsaPipboyTheme/>
     </Application.Styles>
 </Application>

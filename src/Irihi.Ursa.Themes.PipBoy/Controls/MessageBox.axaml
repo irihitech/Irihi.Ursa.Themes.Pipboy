@@ -72,7 +72,7 @@
                                 <PathIcon
                                     Name="PART_Icon"
                                     Grid.Column="0"
-                                    Theme="{StaticResource InnerPathIcon}"
+                                    Theme="{DynamicResource InnerPathIcon}"
                                     Classes="ExtraLarge"
                                     Margin="0,0,8,0"
                                     VerticalAlignment="Center"
@@ -212,7 +212,7 @@
                                 <PathIcon
                                     Name="PART_Icon"
                                     Grid.Column="0"
-                                    Theme="{StaticResource InnerPathIcon}"
+                                    Theme="{DynamicResource InnerPathIcon}"
                                     Classes="ExtraLarge"
                                     Margin="24,24,8,0"
                                     VerticalAlignment="Center"
@@ -273,7 +273,7 @@
                     <MenuItem Command="{Binding $parent[u:MessageBoxControl].Close}" Header="{DynamicResource STRING_MENU_DIALOG_CLOSE}">
                         <MenuItem.Icon>
                             <PathIcon
-                                Theme="{StaticResource InnerPathIcon}"
+                                Theme="{DynamicResource InnerPathIcon}"
                                 Data="{DynamicResource SemiIconClose}" />
                         </MenuItem.Icon>
                     </MenuItem>

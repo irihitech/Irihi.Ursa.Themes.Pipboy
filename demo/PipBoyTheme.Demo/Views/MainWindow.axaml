@@ -162,6 +162,9 @@
         <TabItem Header="OVERVIEW" Theme="{StaticResource NavTabItem}">
             <pages:OverviewPage />
         </TabItem>
+        <TabItem Header="URSA" Theme="{StaticResource NavTabItem}">
+            <pages:UrsaOverviewPage />
+        </TabItem>
     </TabControl>
 
 </avalonia:PipboyWindow>
