@@ -14,12 +14,12 @@
     <ControlTheme x:Key="{x:Type u:DualBadge}" TargetType="u:DualBadge">
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="IconForeground" Value="{DynamicResource DualBadgeDefaultIconForeground}" />
-        <Setter Property="HeaderForeground" Value="{DynamicResource DualBadgeDefaultHeaderForeground}" />
-        <Setter Property="HeaderBackground" Value="{DynamicResource DualBadgeDefaultHeaderBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource DualBadgeDefaultForeground}" />
+        <Setter Property="IconForeground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="HeaderForeground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="HeaderBackground" Value="{DynamicResource PipboySurfaceHighBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
         <Setter Property="CornerRadius" Value="{DynamicResource DualBadgeDefaultCornerRadius}" />
-        <Setter Property="Background" Value="{DynamicResource DualBadgeFlatGreenBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
         <Setter Property="Padding" Value="{DynamicResource DualBadgeDefaultPadding}" />
         <Setter Property="FontSize" Value="{DynamicResource DualBadgeDefaultFontSize}" />
         <Setter Property="UseLayoutRounding" Value="False" />
@@ -76,52 +76,52 @@
         </Setter>
 
         <Style Selector="^.Red">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatRedBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
         <Style Selector="^.Pink">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatPinkBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Purple">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatPurpleBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Violet">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatVioletBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Indigo">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatIndigoBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Blue">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatBlueBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.LightBlue">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatLightBlueBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryLightBrush}" />
         </Style>
         <Style Selector="^.Cyan">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatCyanBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryLightBrush}" />
         </Style>
         <Style Selector="^.Teal">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatTealBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryLightBrush}" />
         </Style>
         <Style Selector="^.Green">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatGreenBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
         </Style>
         <Style Selector="^.LightGreen">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatLightGreenBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
         </Style>
         <Style Selector="^.Lime">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatLimeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
         </Style>
         <Style Selector="^.Yellow">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatYellowBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
         </Style>
         <Style Selector="^.Amber">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatAmberBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
         </Style>
         <Style Selector="^.Orange">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatOrangeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
         </Style>
         <Style Selector="^.Grey">
-            <Setter Property="Background" Value="{DynamicResource DualBadgeFlatGreyBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyTextDimBrush}" />
         </Style>
 
         <Style Selector="^.FlatSquare">
@@ -130,54 +130,54 @@
 
         <Style Selector="^.Plastic">
             <Setter Property="Padding" Value="{DynamicResource DualBadgePlasticPadding}" />
-            <Setter Property="HeaderBackground" Value="{DynamicResource DualBadgePlasticHeaderBackground}" />
+            <Setter Property="HeaderBackground" Value="{DynamicResource PipboySurfaceHighBrush}" />
             <Style Selector="^.Red">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticRedBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
             <Style Selector="^.Pink">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticPinkBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^.Purple">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticPurpleBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^.Violet">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticVioletBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^.Indigo">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticIndigoBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^.Blue">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticBlueBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^.LightBlue">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticLightBlueBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryLightBrush}" />
             </Style>
             <Style Selector="^.Cyan">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticCyanBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryLightBrush}" />
             </Style>
             <Style Selector="^.Teal">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticTealBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryLightBrush}" />
             </Style>
             <Style Selector="^.Green">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticGreenBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^.LightGreen">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticLightGreenBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^.Lime">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticLimeBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^.Yellow">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticYellowBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^.Amber">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticAmberBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^.Orange">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticOrangeBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^.Grey">
-                <Setter Property="Background" Value="{DynamicResource DualBadgePlasticGreyBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyTextDimBrush}" />
             </Style>
         </Style>
 

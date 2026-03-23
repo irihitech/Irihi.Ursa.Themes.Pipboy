@@ -32,14 +32,14 @@
         <!--  Set a very large corner radius to achieve pill look.  -->
         <Setter Property="CornerRadius" Value="{DynamicResource BadgeCornerRadius}" />
         <Setter Property="BadgeFontSize" Value="{DynamicResource BadgeFontSize}" />
-        <Setter Property="Foreground" Value="{DynamicResource BadgeForeground}" />
-        <Setter Property="Background" Value="{DynamicResource BadgePrimaryBadgeBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         <Setter Property="ClipToBounds" Value="False" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="BorderThickness" Value="{DynamicResource BadgeBorderThickness}" />
         <Setter Property="UseLayoutRounding" Value="False" />
-        <Setter Property="BorderBrush" Value="{DynamicResource BadgeBorderBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="CornerPosition" Value="{DynamicResource BadgeCornerPosition}" />
         <Setter Property="Template">
             <ControlTemplate TargetType="{x:Type u:Badge}">
@@ -54,7 +54,7 @@
                         VerticalAlignment="{TemplateBinding VerticalAlignment}"
                         Content="{TemplateBinding Content}"
                         ContentTemplate="{TemplateBinding ContentTemplate}"
-                        Foreground="{DynamicResource BadgeContentForeground}" />
+                        Foreground="{DynamicResource PipboyTextBrush}" />
                     <Border
                         Name="{x:Static u:Badge.PART_BadgeContainer}"
                         MinWidth="{DynamicResource BadgeMinWidth}"
@@ -121,102 +121,102 @@
         </Style>
 
         <Style Selector="^.Primary /template/ Border#PART_BadgeContainer">
-            <Setter Property="Background" Value="{DynamicResource BadgePrimaryBadgeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
         <Style Selector="^.Secondary /template/ Border#PART_BadgeContainer">
-            <Setter Property="Background" Value="{DynamicResource BadgeSecondaryBadgeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         </Style>
         <Style Selector="^.Tertiary /template/ Border#PART_BadgeContainer">
-            <Setter Property="Background" Value="{DynamicResource BadgeTertiaryBadgeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         </Style>
         <Style Selector="^.Success /template/ Border#PART_BadgeContainer">
-            <Setter Property="Background" Value="{DynamicResource BadgeSuccessBadgeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
         </Style>
         <Style Selector="^.Warning /template/ Border#PART_BadgeContainer">
-            <Setter Property="Background" Value="{DynamicResource BadgeWarningBadgeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
         </Style>
         <Style Selector="^.Danger /template/ Border#PART_BadgeContainer">
-            <Setter Property="Background" Value="{DynamicResource BadgeDangerBadgeBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
         </Style>
 
         <Style Selector="^.Light">
             <Style Selector="^/template/ ContentPresenter#PART_HeaderPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource BadgeLightPrimaryBadgeForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^/template/ Border#PART_BadgeContainer">
-                <Setter Property="Background" Value="{DynamicResource BadgeLightPrimaryBadgeBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^.Primary">
                 <Style Selector="^/template/ ContentPresenter#PART_HeaderPresenter">
-                    <Setter Property="Foreground" Value="{DynamicResource BadgeLightPrimaryBadgeForeground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
                 </Style>
                 <Style Selector="^/template/ Border#PART_BadgeContainer">
-                    <Setter Property="Background" Value="{DynamicResource BadgeLightPrimaryBadgeBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
                 </Style>
             </Style>
             <Style Selector="^.Secondary">
                 <Style Selector="^/template/ ContentPresenter#PART_HeaderPresenter">
-                    <Setter Property="Foreground" Value="{DynamicResource BadgeLightSecondaryBadgeForeground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
                 </Style>
                 <Style Selector="^/template/ Border#PART_BadgeContainer">
-                    <Setter Property="Background" Value="{DynamicResource BadgeLightSecondaryBadgeBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
                 </Style>
             </Style>
             <Style Selector="^.Tertiary">
                 <Style Selector="^/template/ ContentPresenter#PART_HeaderPresenter">
-                    <Setter Property="Foreground" Value="{DynamicResource BadgeLightTertiaryBadgeForeground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
                 </Style>
                 <Style Selector="^/template/ Border#PART_BadgeContainer">
-                    <Setter Property="Background" Value="{DynamicResource BadgeLightTertiaryBadgeBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
                 </Style>
             </Style>
             <Style Selector="^.Success">
                 <Style Selector="^/template/ ContentPresenter#PART_HeaderPresenter">
-                    <Setter Property="Foreground" Value="{DynamicResource BadgeLightSuccessBadgeForeground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource PipboySuccessBrush}" />
                 </Style>
                 <Style Selector="^/template/ Border#PART_BadgeContainer">
-                    <Setter Property="Background" Value="{DynamicResource BadgeLightSuccessBadgeBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
                 </Style>
             </Style>
             <Style Selector="^.Warning">
                 <Style Selector="^/template/ ContentPresenter#PART_HeaderPresenter">
-                    <Setter Property="Foreground" Value="{DynamicResource BadgeLightWarningBadgeForeground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource PipboyWarningBrush}" />
                 </Style>
                 <Style Selector="^/template/ Border#PART_BadgeContainer">
-                    <Setter Property="Background" Value="{DynamicResource BadgeLightWarningBadgeBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
                 </Style>
             </Style>
             <Style Selector="^.Danger">
                 <Style Selector="^/template/ ContentPresenter#PART_HeaderPresenter">
-                    <Setter Property="Foreground" Value="{DynamicResource BadgeLightDangerBadgeForeground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource PipboyErrorBrush}" />
                 </Style>
                 <Style Selector="^/template/ Border#PART_BadgeContainer">
-                    <Setter Property="Background" Value="{DynamicResource BadgeLightDangerBadgeBackground}" />
+                    <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
                 </Style>
             </Style>
         </Style>
         <Style Selector="^.Inverted">
             <Style Selector="^/template/ Border#PART_BadgeContainer">
-                <Setter Property="Background" Value="{DynamicResource BadgeInvertedBadgeBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
             </Style>
-            <Setter Property="Foreground" Value="{DynamicResource BadgeInvertedPrimaryBadgeForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             <Style Selector="^.Primary /template/ ContentPresenter#PART_HeaderPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource BadgeInvertedPrimaryBadgeForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^.Secondary /template/ ContentPresenter#PART_HeaderPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource BadgeInvertedSecondaryBadgeForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
             </Style>
             <Style Selector="^.Tertiary /template/ ContentPresenter#PART_HeaderPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource BadgeInvertedTertiaryBadgeForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextDimBrush}" />
             </Style>
             <Style Selector="^.Success /template/ ContentPresenter#PART_HeaderPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource BadgeInvertedSuccessBadgeForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^.Warning /template/ ContentPresenter#PART_HeaderPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource BadgeInvertedWarningBadgeForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^.Danger /template/ ContentPresenter#PART_HeaderPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource BadgeInvertedDangerBadgeForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
         </Style>
     </ControlTheme>

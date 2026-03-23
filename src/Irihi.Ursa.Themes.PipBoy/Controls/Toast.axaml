@@ -36,7 +36,7 @@
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="BorderThickness" Value="{DynamicResource ToastCardBorderThickness}" />
-        <Setter Property="Background" Value="{DynamicResource ToastCardBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         <Setter Property="CornerRadius" Value="{DynamicResource ToastCardCornerRadius}" />
         <Setter Property="Template">
             <ControlTemplate TargetType="u:ToastCard">
@@ -72,14 +72,14 @@
                                     <ContentControl.DataTemplates>
                                         <DataTemplate DataType="u:IToast">
                                             <SelectableTextBlock
-                                                Foreground="{DynamicResource ToastCardContentForeground}"
+                                                Foreground="{DynamicResource PipboyTextBrush}"
                                                 FontWeight="{DynamicResource ToastCardContentFontWeight}"
                                                 Text="{Binding Content}"
                                                 TextWrapping="Wrap" />
                                         </DataTemplate>
                                         <DataTemplate DataType="x:String">
                                             <SelectableTextBlock
-                                                Foreground="{DynamicResource ToastCardContentForeground}"
+                                                Foreground="{DynamicResource PipboyTextBrush}"
                                                 FontWeight="{DynamicResource ToastCardContentFontWeight}"
                                                 Text="{Binding}"
                                                 TextWrapping="Wrap" />
@@ -185,39 +185,39 @@
         </Style>
 
         <Style Selector="^:information /template/ PathIcon#ToastIcon">
-            <Setter Property="Foreground" Value="{DynamicResource NotificationCardInformationIconForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             <Setter Property="Data" Value="{DynamicResource NotificationCardInformationIconPathData}" />
         </Style>
         <Style Selector="^:success /template/ PathIcon#ToastIcon">
-            <Setter Property="Foreground" Value="{DynamicResource NotificationCardSuccessIconForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboySuccessBrush}" />
             <Setter Property="Data" Value="{DynamicResource NotificationCardSuccessIconPathData}" />
         </Style>
         <Style Selector="^:warning /template/ PathIcon#ToastIcon">
-            <Setter Property="Foreground" Value="{DynamicResource NotificationCardWarningIconForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyWarningBrush}" />
             <Setter Property="Data" Value="{DynamicResource NotificationCardWarningIconPathData}" />
         </Style>
         <Style Selector="^:error /template/ PathIcon#ToastIcon">
-            <Setter Property="Foreground" Value="{DynamicResource NotificationCardErrorIconForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyErrorBrush}" />
             <Setter Property="Data" Value="{DynamicResource NotificationCardErrorIconPathData}" />
         </Style>
 
         <Style Selector="^.Light">
-            <Setter Property="Background" Value="{DynamicResource NotificationCardLightBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             <Style Selector="^:information /template/ Border#PART_RootBorder">
-                <Setter Property="BorderBrush" Value="{DynamicResource NotificationCardLightInformationBorderBrush}" />
-                <Setter Property="Background" Value="{DynamicResource NotificationCardLightInformationBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^:success /template/ Border#PART_RootBorder">
-                <Setter Property="BorderBrush" Value="{DynamicResource NotificationCardLightSuccessBorderBrush}" />
-                <Setter Property="Background" Value="{DynamicResource NotificationCardLightSuccessBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySuccessBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^:warning /template/ Border#PART_RootBorder">
-                <Setter Property="BorderBrush" Value="{DynamicResource NotificationCardLightWarningBorderBrush}" />
-                <Setter Property="Background" Value="{DynamicResource NotificationCardLightWarningBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyWarningBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^:error /template/ Border#PART_RootBorder">
-                <Setter Property="BorderBrush" Value="{DynamicResource NotificationCardLightErrorBorderBrush}" />
-                <Setter Property="Background" Value="{DynamicResource NotificationCardLightErrorBackground}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyErrorBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
         </Style>
     </ControlTheme>

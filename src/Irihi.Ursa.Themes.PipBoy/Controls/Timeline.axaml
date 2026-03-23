@@ -58,7 +58,7 @@
                             HorizontalAlignment="Center"
                             VerticalAlignment="Stretch"
                             Classes="end"
-                            Fill="{DynamicResource TimelineLineBrush}" />
+                            Fill="{DynamicResource PipboyBorderBrush}" />
                     </Grid>
                     <ContentPresenter
                         Name="{x:Static u:TimelineItem.PART_Header}"
@@ -69,7 +69,7 @@
                         Content="{TemplateBinding Header}"
                         ContentTemplate="{TemplateBinding HeaderTemplate}"
                         FontSize="14"
-                        Foreground="{DynamicResource TimelineHeaderForeground}" />
+                        Foreground="{DynamicResource PipboyTextBrush}" />
                     <ContentPresenter
                         Name="{x:Static u:TimelineItem.PART_Content}"
                         Grid.Row="1"

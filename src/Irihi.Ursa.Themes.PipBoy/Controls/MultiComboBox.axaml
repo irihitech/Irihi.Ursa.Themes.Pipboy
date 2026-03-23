@@ -15,9 +15,9 @@
     <ControlTheme x:Key="{x:Type u:MultiComboBox}" TargetType="u:MultiComboBox">
         <Setter Property="Focusable" Value="True" />
         <Setter Property="VerticalAlignment" Value="Top" />
-        <Setter Property="Background" Value="{DynamicResource ComboBoxSelectorBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         <Setter Property="CornerRadius" Value="{DynamicResource ComboBoxSelectorCornerRadius}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxSelectorBorderBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="MaxDropDownHeight" Value="300" />
         <Setter Property="MaxSelectionBoxHeight" Value="270" />
@@ -47,7 +47,7 @@
                                     IsHitTestVisible="False"
                                     VerticalAlignment="Center"
                                     Content="{TemplateBinding InnerLeftContent}"
-                                    Foreground="{DynamicResource TextBoxInnerForeground}"
+                                    Foreground="{DynamicResource PipboyTextBrush}"
                                     IsVisible="{TemplateBinding InnerLeftContent,
                                                                 Converter={x:Static ObjectConverters.IsNotNull}}" />
                                 <TextBlock
@@ -87,7 +87,7 @@
                                     VerticalAlignment="Center"
                                     IsHitTestVisible="False"
                                     Content="{TemplateBinding InnerRightContent}"
-                                    Foreground="{DynamicResource TextBoxInnerForeground}"
+                                    Foreground="{DynamicResource PipboyTextBrush}"
                                     IsVisible="{TemplateBinding InnerRightContent,
                                                                 Converter={x:Static ObjectConverters.IsNotNull}}" />
                                 <PathIcon
@@ -97,7 +97,7 @@
                                     Theme="{DynamicResource InnerPathIcon}"
                                     Width="{DynamicResource ComboBoxIconWidth}"
                                     Data="{DynamicResource ComboBoxIcon}"
-                                    Foreground="{DynamicResource ComboBoxIconDefaultForeground}"
+                                    Foreground="{DynamicResource PipboyTextDimBrush}"
                                     IsHitTestVisible="False"
                                     UseLayoutRounding="False" />
                                 <Button
@@ -120,8 +120,8 @@
                                 MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                                 Margin="{DynamicResource ComboBoxPopupBorderMargin}"
                                 Padding="{DynamicResource ComboBoxPopupBorderPadding}"
-                                Background="{DynamicResource ComboBoxPopupBackground}"
-                                BorderBrush="{DynamicResource ComboBoxPopupBorderBrush}"
+                                Background="{DynamicResource PipboySurfaceBrush}"
+                                BorderBrush="{DynamicResource PipboyBorderBrush}"
                                 BorderThickness="{DynamicResource ComboBoxPopupBorderThickness}"
                                 BoxShadow="{DynamicResource ComboBoxPopupBoxShadow}"
                                 CornerRadius="{DynamicResource ComboBoxPopupBoxCornerRadius}">
@@ -164,63 +164,63 @@
 
         <!--  Pointerover State  -->
         <Style Selector="^:pointerover">
-            <Setter Property="Background" Value="{DynamicResource ComboBoxSelectorPointeroverBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxSelectorPointeroverBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
         <Style Selector="^:pointerover /template/ PathIcon#DropDownGlyph">
-            <Setter Property="Foreground" Value="{DynamicResource ComboBoxIconPointeroverForeground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
         </Style>
 
         <!--  Pressed State  -->
         <Style Selector="^:pressed">
-            <Setter Property="Background" Value="{DynamicResource ComboBoxSelectorPressedBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxSelectorPressedBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
             <Style Selector="^ /template/ PathIcon#DropDownGlyph">
-                <Setter Property="Foreground" Value="{DynamicResource ComboBoxIconPressedForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
             </Style>
         </Style>
 
         <Style Selector="^:focus">
-            <Setter Property="Background" Value="{DynamicResource ComboBoxSelectorFocusBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxSelectorFocusBorderBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboySurfaceHighBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderFocusBrush}" />
             <Style Selector="^ /template/ PathIcon#DropDownGlyph">
-                <Setter Property="Foreground" Value="{DynamicResource ComboBoxIconFocusForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyFocusBrush}" />
             </Style>
         </Style>
 
         <Style Selector="^:dropdownopen">
-            <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxSelectorPressedBorderBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         </Style>
 
         <!--  Disabled State  -->
         <Style Selector="^:disabled">
-            <Setter Property="Background" Value="{DynamicResource ComboBoxSelectorDisabledBackground}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
             <Style Selector="^ /template/ ContentControl#ContentPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource ComboBoxDisabledForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
             </Style>
             <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
-                <Setter Property="Foreground" Value="{DynamicResource ComboBoxDisabledForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
             </Style>
             <Style Selector="^ /template/ PathIcon#DropDownGlyph">
-                <Setter Property="Foreground" Value="{DynamicResource ComboBoxIconDisabledForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
             </Style>
         </Style>
         <!--  Error State  -->
         <Style Selector="^:error">
             <Style Selector="^ /template/ Border#Background">
-                <Setter Property="Background" Value="{DynamicResource DataValidationErrorsBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
             <Style Selector="^:pointerover /template/ Border#Background">
-                <Setter Property="Background" Value="{DynamicResource DataValidationErrorsPointerOverBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
                 <Setter Property="BorderBrush" Value="Transparent" />
             </Style>
             <Style Selector="^:pressed /template/ Border#Background">
-                <Setter Property="Background" Value="{DynamicResource DataValidationErrorsPressedBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
                 <Setter Property="BorderBrush" Value="Transparent" />
             </Style>
             <Style Selector="^:focus /template/ Border#Background">
-                <Setter Property="Background" Value="{DynamicResource DataValidationErrorsSelectedBackground}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource DataValidationErrorsSelectedBorderBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
         </Style>
     </ControlTheme>
@@ -233,7 +233,7 @@
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="MinHeight" Value="32" />
-        <Setter Property="Background" Value="{DynamicResource ComboBoxItemBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
         <Setter Property="Template">
             <ControlTemplate TargetType="u:MultiComboBoxItem">
                 <Border
@@ -269,23 +269,23 @@
             </ControlTemplate>
         </Setter>
         <Style Selector="^:disabled">
-            <Setter Property="Foreground" Value="{DynamicResource ListBoxItemDisabledForeground}" />
-            <Setter Property="Background" Value="{DynamicResource ListBoxItemDisabledBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyDisabledBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
             <Style Selector="^:selected">
-                <Setter Property="Background" Value="{DynamicResource ListBoxItemSelectedDisabledBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
             </Style>
         </Style>
 
         <!--  Pointerover State  -->
         <Style Selector="^:pointerover">
-            <Setter Property="Foreground" Value="{DynamicResource ComboBoxItemPointeroverForeground}" />
-            <Setter Property="Background" Value="{DynamicResource ComboBoxItemPointeroverBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyHoverBrush}" />
         </Style>
 
         <!--  Pressed State  -->
         <Style Selector="^:pressed">
-            <Setter Property="Foreground" Value="{DynamicResource ComboBoxItemPressedForeground}" />
-            <Setter Property="Background" Value="{DynamicResource ComboBoxItemPressedBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPressedBrush}" />
         </Style>
 
         <!--  Selected State  -->

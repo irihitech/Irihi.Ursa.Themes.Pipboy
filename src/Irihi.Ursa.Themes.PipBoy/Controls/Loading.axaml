@@ -11,7 +11,7 @@
     </Design.PreviewWith>
     <ControlTheme x:Key="{x:Type u:LoadingIcon}" TargetType="u:LoadingIcon">
         <Setter Property="IsLoading" Value="True" />
-        <Setter Property="Foreground" Value="{DynamicResource LoadingIconForeground}" />
+        <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
         <Setter Property="Template">
             <ControlTemplate TargetType="u:LoadingIcon">
                 <Arc
@@ -61,7 +61,7 @@
     </ControlTheme>
 
     <ControlTheme x:Key="{x:Type u:Loading}" TargetType="u:Loading">
-        <Setter Property="Background" Value="{DynamicResource LoadingMaskBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
         <Setter Property="Indicator">
             <Template>
                 <u:LoadingIcon IsLoading="{Binding $parent[u:Loading].IsLoading, Mode=TwoWay}" />
@@ -96,7 +96,7 @@
     <ControlTheme x:Key="{x:Type u:LoadingContainer}" TargetType="u:LoadingContainer">
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="MessageForeground" Value="{DynamicResource PipboyTextBrush}" />
-        <Setter Property="Background" Value="{DynamicResource LoadingMaskBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PipboyBackgroundBrush}" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Indicator">
             <Template>

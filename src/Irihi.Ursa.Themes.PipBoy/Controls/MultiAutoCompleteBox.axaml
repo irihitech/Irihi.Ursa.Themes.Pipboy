@@ -13,8 +13,8 @@
                         Name="PART_RootBorder"
                         MinHeight="30"
                         VerticalAlignment="Stretch"
-                        Background="{DynamicResource TextBoxDefaultBackground}"
-                        BorderBrush="{DynamicResource TextBoxDefaultBorderBrush}"
+                        Background="{DynamicResource PipboySurfaceBrush}"
+                        BorderBrush="{DynamicResource PipboyBorderBrush}"
                         CornerRadius="{TemplateBinding CornerRadius}">
                         <Grid ColumnDefinitions="Auto, *, Auto">
                             <ContentPresenter
@@ -22,7 +22,7 @@
                                 Margin="8,0,0,0"
                                 VerticalAlignment="Center"
                                 Content="{TemplateBinding InnerLeftContent}"
-                                Foreground="{DynamicResource TextBoxInnerForeground}"
+                                Foreground="{DynamicResource PipboyTextBrush}"
                                 IsHitTestVisible="False"
                                 IsVisible="{TemplateBinding InnerLeftContent,
                                                             Converter={x:Static ObjectConverters.IsNotNull}}" />
@@ -52,7 +52,7 @@
                                 Margin="8,0"
                                 VerticalAlignment="Center"
                                 Content="{TemplateBinding InnerRightContent}"
-                                Foreground="{DynamicResource TextBoxInnerForeground}"
+                                Foreground="{DynamicResource PipboyTextBrush}"
                                 IsHitTestVisible="False"
                                 IsVisible="{TemplateBinding InnerRightContent,
                                                             Converter={x:Static ObjectConverters.IsNotNull}}" />
@@ -68,8 +68,8 @@
                             Margin="{DynamicResource AutoCompleteBoxPopupMargin}"
                             Padding="{DynamicResource AutoCompleteBoxPopupPadding}"
                             HorizontalAlignment="Stretch"
-                            Background="{DynamicResource AutoCompleteBoxPopupBackground}"
-                            BorderBrush="{DynamicResource AutoCompleteBoxPopupBorderBrush}"
+                            Background="{DynamicResource PipboySurfaceBrush}"
+                            BorderBrush="{DynamicResource PipboyBorderBrush}"
                             BorderThickness="{DynamicResource AutoCompleteBoxPopupBorderThickness}"
                             BoxShadow="{DynamicResource AutoCompleteBoxPopupBoxShadow}"
                             CornerRadius="{DynamicResource AutoCompleteBoxPopupCornerRadius}">

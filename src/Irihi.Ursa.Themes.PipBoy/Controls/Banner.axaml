@@ -15,7 +15,7 @@
     <ControlTheme x:Key="{x:Type u:Banner}" TargetType="u:Banner">
         <Setter Property="Padding" Value="{DynamicResource BannerBorderPadding}" />
         <Setter Property="BorderThickness" Value="{DynamicResource BannerBorderThickness}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource BannerBorderBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="Template">
             <ControlTemplate TargetType="u:Banner">
@@ -73,50 +73,50 @@
         </Style>
         <Style Selector="^[Type=Information]">
             <Style Selector="^.Bordered /template/ Border#PART_Container">
-                <Setter Property="BorderBrush" Value="{DynamicResource BannerInformationBorderBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Container">
-                <Setter Property="Background" Value="{DynamicResource BannerInformationBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^ /template/ PathIcon#PART_BuildInIcon">
                 <Setter Property="Data" Value="{DynamicResource BannerInformationIconGeometry}" />
-                <Setter Property="Foreground" Value="{DynamicResource BannerInformationBorderBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
         </Style>
         <Style Selector="^[Type=Success]">
             <Style Selector="^.Bordered /template/ Border#PART_Container">
-                <Setter Property="BorderBrush" Value="{DynamicResource BannerSuccessBorderBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Container">
-                <Setter Property="Background" Value="{DynamicResource BannerSuccessBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
             <Style Selector="^ /template/ PathIcon#PART_BuildInIcon">
                 <Setter Property="Data" Value="{DynamicResource BannerSuccessIconGeometry}" />
-                <Setter Property="Foreground" Value="{DynamicResource BannerSuccessBorderBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
         </Style>
         <Style Selector="^[Type=Warning]">
             <Style Selector="^.Bordered /template/ Border#PART_Container">
-                <Setter Property="BorderBrush" Value="{DynamicResource BannerWarningBorderBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Container">
-                <Setter Property="Background" Value="{DynamicResource BannerWarningBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
             <Style Selector="^ /template/ PathIcon#PART_BuildInIcon">
                 <Setter Property="Data" Value="{DynamicResource BannerWarningIconGeometry}" />
-                <Setter Property="Foreground" Value="{DynamicResource BannerWarningBorderBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
         </Style>
         <Style Selector="^[Type=Error]">
             <Style Selector="^.Bordered /template/ Border#PART_Container">
-                <Setter Property="BorderBrush" Value="{DynamicResource BannerErrorBorderBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Container">
-                <Setter Property="Background" Value="{DynamicResource BannerErrorBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
             <Style Selector="^ /template/ PathIcon#PART_BuildInIcon">
                 <Setter Property="Data" Value="{DynamicResource BannerErrorIconGeometry}" />
-                <Setter Property="Foreground" Value="{DynamicResource BannerErrorBorderBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
         </Style>
     </ControlTheme>

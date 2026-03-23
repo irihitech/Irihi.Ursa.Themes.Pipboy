@@ -15,7 +15,7 @@
                         Name="PART_Pipe"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Stretch"
-                        Fill="{DynamicResource AnchorPipeBackground}" />
+                        Fill="{DynamicResource PipboySurfaceBrush}" />
                     <ItemsPresenter
                         Name="PART_ItemsPresenter"
                         Margin="{TemplateBinding Padding}"
@@ -46,7 +46,7 @@
                             <ContentPresenter
                                 Name="{x:Static iri:PartNames.PART_HeaderPresenter}"
                                 VerticalAlignment="Center"
-                                Foreground="{DynamicResource AnchorForeground}"
+                                Foreground="{DynamicResource PipboyPrimaryBrush}"
                                 Content="{TemplateBinding Header}"
                                 ContentTemplate="{TemplateBinding HeaderTemplate}">
                                 <ContentPresenter.Padding>
@@ -71,16 +71,16 @@
         </Style>
         <Style Selector="^:selected">
             <Style Selector="^ /template/ ContentPresenter#PART_HeaderPresenter">
-                <Setter Property="Foreground" Value="{DynamicResource AnchorSelectedForeground}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^ /template/ Border#PART_Pipe">
-                <Setter Property="Background" Value="{DynamicResource AnchorPipeSelectedBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySelectionBrush}" />
             </Style>
             <Style Selector="^.Primary /template/ Border#PART_Pipe">
-                <Setter Property="Background" Value="{DynamicResource AnchorPipeSelectedPrimaryBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
             <Style Selector="^.Tertiary /template/ Border#PART_Pipe">
-                <Setter Property="Background" Value="{DynamicResource AnchorPipeSelectedTertiaryBackground}" />
+                <Setter Property="Background" Value="{DynamicResource PipboySurfaceBrush}" />
             </Style>
             <Style Selector="^.Muted /template/ Border#PART_Pipe">
                 <Setter Property="Background" Value="Transparent" />

@@ -8,14 +8,14 @@
         </StackPanel>
     </Design.PreviewWith>
     <ControlTheme x:Key="DividerLeftLine" TargetType="{x:Type Rectangle}">
-        <Setter Property="Rectangle.Fill" Value="{DynamicResource DividerBorderBrush}" />
+        <Setter Property="Rectangle.Fill" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="Rectangle.Height" Value="{DynamicResource SizeDividerWidth}" />
         <Setter Property="Rectangle.MinWidth" Value="{DynamicResource SizeDividerLeftMinWidth}" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </ControlTheme>
 
     <ControlTheme x:Key="DividerRightLine" TargetType="{x:Type Rectangle}">
-        <Setter Property="Rectangle.Fill" Value="{DynamicResource DividerBorderBrush}" />
+        <Setter Property="Rectangle.Fill" Value="{DynamicResource PipboyBorderBrush}" />
         <Setter Property="Rectangle.Height" Value="{DynamicResource SizeDividerWidth}" />
         <Setter Property="Rectangle.MinWidth" Value="{DynamicResource SizeDividerRightMinWidth}" />
         <Setter Property="VerticalAlignment" Value="Center" />
@@ -121,7 +121,7 @@
                     <Rectangle
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
-                        Fill="{DynamicResource DividerBorderBrush}" />
+                        Fill="{DynamicResource PipboyBorderBrush}" />
                 </ControlTemplate>
             </Setter>
         </Style>

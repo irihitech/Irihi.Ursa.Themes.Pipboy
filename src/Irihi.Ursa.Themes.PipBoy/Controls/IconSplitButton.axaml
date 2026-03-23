@@ -58,9 +58,9 @@
         <Setter Property="Template" Value="{StaticResource IconSplitButtonTemplate}" />
         <Style Selector="^ /template/ u|IconButton">
             <Setter Property="Theme" Value="{StaticResource SolidIconButton}" />
-            <Setter Property="Foreground" Value="{DynamicResource ButtonSolidForeground}" />
-            <Setter Property="Background" Value="{DynamicResource ButtonSolidPrimaryBackground}" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ButtonSolidPrimaryBorderBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PipboyTextBrush}" />
+            <Setter Property="Background" Value="{DynamicResource PipboyPrimaryBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PipboyPrimaryBrush}" />
         </Style>
     </ControlTheme>
 

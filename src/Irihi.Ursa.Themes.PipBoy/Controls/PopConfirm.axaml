@@ -23,8 +23,8 @@
                             MaxWidth="{DynamicResource PopConfirmBorderMaxWidth}"
                             Padding="{DynamicResource PopConfirmBorderPadding}"
                             Margin="{DynamicResource PopConfirmBorderMargin}"
-                            Background="{DynamicResource PopConfirmBackground}"
-                            BorderBrush="{DynamicResource PopConfirmBorderBrush}"
+                            Background="{DynamicResource PipboySurfaceBrush}"
+                            BorderBrush="{DynamicResource PipboyBorderBrush}"
                             BorderThickness="{DynamicResource PopConfirmBorderThickness}"
                             CornerRadius="{DynamicResource PopConfirmBorderCornerRadius}"
                             BoxShadow="{DynamicResource PopConfirmBorderBoxShadows}">
@@ -44,7 +44,7 @@
                                         Theme="{DynamicResource InnerPathIcon}"
                                         Classes="ExtraLarge"
                                         Data="{DynamicResource BannerWarningIconGeometry}"
-                                        Foreground="{DynamicResource BannerWarningBorderBrush}"
+                                        Foreground="{DynamicResource PipboyWarningBrush}"
                                         IsVisible="{TemplateBinding Icon, Converter={x:Static ObjectConverters.IsNull}}" />
                                 </Panel>
                                 <StackPanel
@@ -60,7 +60,7 @@
                                     <ContentPresenter
                                         Content="{TemplateBinding PopupContent}"
                                         ContentTemplate="{TemplateBinding PopupContentTemplate}"
-                                        Foreground="{DynamicResource PopConfirmContentForeground}"
+                                        Foreground="{DynamicResource PipboyTextBrush}"
                                         TextWrapping="Wrap" />
                                 </StackPanel>
                                 <Button
@@ -110,25 +110,25 @@
         <Style Selector="^.Information">
             <Style Selector="^ /template/ PathIcon#PART_BuildInIcon">
                 <Setter Property="Data" Value="{DynamicResource BannerInformationIconGeometry}" />
-                <Setter Property="Foreground" Value="{DynamicResource BannerInformationBorderBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyPrimaryBrush}" />
             </Style>
         </Style>
         <Style Selector="^.Success">
             <Style Selector="^ /template/ PathIcon#PART_BuildInIcon">
                 <Setter Property="Data" Value="{DynamicResource BannerSuccessIconGeometry}" />
-                <Setter Property="Foreground" Value="{DynamicResource BannerSuccessBorderBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboySuccessBrush}" />
             </Style>
         </Style>
         <Style Selector="^.Warning">
             <Style Selector="^ /template/ PathIcon#PART_BuildInIcon">
                 <Setter Property="Data" Value="{DynamicResource BannerWarningIconGeometry}" />
-                <Setter Property="Foreground" Value="{DynamicResource BannerWarningBorderBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyWarningBrush}" />
             </Style>
         </Style>
         <Style Selector="^.Error">
             <Style Selector="^ /template/ PathIcon#PART_BuildInIcon">
                 <Setter Property="Data" Value="{DynamicResource BannerErrorIconGeometry}" />
-                <Setter Property="Foreground" Value="{DynamicResource BannerErrorBorderBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource PipboyErrorBrush}" />
             </Style>
         </Style>
     </ControlTheme>

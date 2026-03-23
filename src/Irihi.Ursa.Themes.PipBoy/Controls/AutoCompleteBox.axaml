@@ -35,8 +35,8 @@
                             Margin="{DynamicResource AutoCompleteBoxPopupMargin}"
                             Padding="{DynamicResource AutoCompleteBoxPopupPadding}"
                             HorizontalAlignment="Stretch"
-                            Background="{DynamicResource AutoCompleteBoxPopupBackground}"
-                            BorderBrush="{DynamicResource AutoCompleteBoxPopupBorderBrush}"
+                            Background="{DynamicResource PipboySurfaceBrush}"
+                            BorderBrush="{DynamicResource PipboyBorderBrush}"
                             BorderThickness="{DynamicResource AutoCompleteBoxPopupBorderThickness}"
                             BoxShadow="{DynamicResource AutoCompleteBoxPopupBoxShadow}"
                             CornerRadius="{DynamicResource AutoCompleteBoxPopupCornerRadius}">
