@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.3.12" />
     <PackageReference Include="Irihi.Ursa" Version="1.15.0" />
-    <PackageReference Include="Pipboy.Avalonia" Version="0.0.2-beta" />
+    <PackageReference Include="Pipboy.Avalonia" Version="0.0.3-beta" />
   </ItemGroup>
 
 </Project>
